@@ -53,7 +53,10 @@ in {
       ntfs3g
       apmplanner2
       alejandra
+      obs-studio
+      kdenlive
     ];
+
 
     catppuccin.flavor = "mocha";
     catppuccin.enable = true;
