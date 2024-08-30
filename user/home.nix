@@ -80,10 +80,7 @@ in {
 
       shellAliases = {
         ll = "ls -l";
-        cdwork = "cd ~/Documents/Work/Aratom/";
-        update = "sudo nixos-rebuild switch |& nom";
-        modhome = "sudo nvim /etc/nixos/user/home.nix";
-        modsys = "sudo nvim /etc/nixos/configuration.nix";
+        rebuild = "~/nixos/rebuild.zsh";
         work = "cd ~/code/work";
         personal = "cd ~/code/personal";
         rocket = "cd ~/code/work/rocket/rocket_caddis_original_fw/SW";
