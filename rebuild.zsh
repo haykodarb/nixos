@@ -1,4 +1,4 @@
-!/usr/bin/env zsh
+#!/usr/bin/env zsh
 set -e
 pushd ~/nixos
 nvim ./user/home.nix
