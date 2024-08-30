@@ -1,16 +1,18 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./user/home.nix
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./user/home.nix
   ];
-  
+
   nix = {
-    settings.experimental-features = ["nix-command" "flakes" ];
+    settings.experimental-features = ["nix-command" "flakes"];
   };
 
   nixpkgs.config.permittedInsecurePackages = [
@@ -22,9 +24,9 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  
+
   # boot.supportedFilesystems = [ "ntfs" ];
-    
+
   documentation.man.generateCaches = true;
 
   hardware.enableAllFirmware = true;
@@ -33,19 +35,19 @@
   nixpkgs.config.pulseaudio = true;
   hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
 
-# rtkit is optional but recommended
+  # rtkit is optional but recommended
   #services.pipewire = {
   #  enable = true;
   #  alsa.enable = true;
-   # alsa.support32Bit = true;
-   # pulse.enable = true;
-   ## # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
+  # alsa.support32Bit = true;
+  # pulse.enable = true;
+  ## # If you want to use JACK applications, uncomment this
+  #jack.enable = true;
   #}#;
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
-  
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -77,7 +79,7 @@
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
   services.xserver.enable = true;
- 
+
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
@@ -89,7 +91,7 @@
   };
 
   services.blueman.enable = true;
- # Enable CUPS to print documents.
+  # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Enable sound with pipewire.
@@ -99,24 +101,24 @@
   #  alsa.enable = true;
   #  alsa.support32Bit = true;
   #  pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
+  # If you want to use JACK applications, uncomment this
   #  jack.enable = true;
 
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
+  # use the example session manager (no others are packaged yet so this is enabled by default,
+  # no need to redefine it in your config for now)
+  #media-session.enable = true;
   #};
- 
+
   programs.firefox.enable = true;
 
   services.displayManager.sddm.catppuccin.enable = false;
   boot.loader.grub.catppuccin.enable = true;
 
-# Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.hayk = {
     isNormalUser = true;
     description = "Hayk";
-    extraGroups = [ "networkmanager" "wheel" "audio" "dialout" ];
+    extraGroups = ["networkmanager" "wheel" "audio" "dialout"];
     packages = with pkgs; [
       kdePackages.kate
     ];
@@ -126,14 +128,14 @@
   #  services.xserver.displayManager.autoLogin.enable = true;
   #  services.xserver.displayManager.autoLogin.user = "hayk";
 
-	  # Allow unfree packages
+  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
     pavucontrol
     neofetch
     nix-output-monitor

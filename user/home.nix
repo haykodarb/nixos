@@ -1,234 +1,255 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
-  
+
   nixvim = import (builtins.fetchGit {
     url = "https://github.com/nix-community/nixvim";
     ref = "nixos-24.05";
   });
-  
+
   catppuccin = builtins.fetchTarball "https://github.com/catppuccin/nix/archive/main.tar.gz";
-in
-  {
+in {
+  imports = [
+    (import "${home-manager}/nixos")
+    nixvim.nixosModules.nixvim
+    (import "${catppuccin}/modules/nixos")
+  ];
+
+  home-manager.users.hayk = {
     imports = [
-      (import "${home-manager}/nixos")
-      nixvim.nixosModules.nixvim
-      (import "${catppuccin}/modules/nixos")
+      (import "${catppuccin}/modules/home-manager")
     ];
 
-    home-manager.users.hayk = {
-      imports = [
-        (import "${catppuccin}/modules/home-manager")
-      ];
-      
-      home.stateVersion = "24.05";
-      home.packages = with pkgs; [ 
-        btop ripgrep fd bear flutter jdk17
-        gnumake gcc-arm-embedded openocd gcc
-        qgroundcontrol thunderbird discord slack electron
-        lazygit android-tools android-studio-tools android-studio
-        catppuccin-gtk catppuccin-kde catppuccin-qt5ct catppuccin-cursors catppuccinifier-gui
-        libreoffice-qt nethogs xclip gnome.gnome-disk-utility udisks qbittorrent remmina woeusb-ng
-        ntfs3g apmplanner2 alejandra
-      ];
+    home.stateVersion = "24.05";
+    home.packages = with pkgs; [
+      btop
+      ripgrep
+      fd
+      bear
+      flutter
+      jdk17
+      gnumake
+      gcc-arm-embedded
+      openocd
+      gcc
+      qgroundcontrol
+      thunderbird
+      discord
+      slack
+      electron
+      lazygit
+      android-tools
+      android-studio-tools
+      android-studio
+      catppuccin-gtk
+      catppuccin-kde
+      catppuccin-qt5ct
+      catppuccin-cursors
+      catppuccinifier-gui
+      libreoffice-qt
+      nethogs
+      xclip
+      gnome.gnome-disk-utility
+      udisks
+      qbittorrent
+      remmina
+      woeusb-ng
+      ntfs3g
+      apmplanner2
+      alejandra
+    ];
 
-      catppuccin.flavor = "mocha";
-      catppuccin.enable = true;
+    catppuccin.flavor = "mocha";
+    catppuccin.enable = true;
 
-      programs.git = {
-        enable = true;
-        userName  = "Hayk Darbinyan";
-        userEmail = "work@hayk.ar";
-      };
+    programs.git = {
+      enable = true;
+      userName = "Hayk Darbinyan";
+      userEmail = "work@hayk.ar";
+    };
 
-      programs.zsh = {
-        enable = true;
-        enableCompletion = true;
+    programs.zsh = {
+      enable = true;
+      enableCompletion = true;
 
-        initExtra = "
+      initExtra = "
           DISABLE_AUTO_UPDATE=\"true\"\n
           source ~/.nix-profile/share/git/contrib/completion/git-prompt.sh \n
           setopt PROMPT_SUBST \n
           PS1='%F{red} [ %f%F{cyan}%2~%f%F{red} ] [%f%F{yellow}$(__git_ps1 \" %s \")%f%F{red}] \n > %f'
         ";
-        
-        shellAliases = {
-          ll = "ls -l";
-          cdwork = "cd ~/Documents/Work/Aratom/";
-          update = "sudo nixos-rebuild switch |& nom";
-          modhome = "sudo nvim /etc/nixos/user/home.nix";
-          modsys = "sudo nvim /etc/nixos/configuration.nix";
-          work = "cd ~/code/work";
-          personal = "cd ~/code/personal";
-          rocket = "cd ~/code/work/rocket/rocket_caddis_original_fw/SW";
-          communal = "cd ~/code/personal/communal/communal_app";
-        };
- 
-        syntaxHighlighting.enable = true;
-        autosuggestion.enable = true;
 
-        syntaxHighlighting.highlighters = [ "brackets" "main" "cursor" ];
-
-        history = {
-          ignoreDups = true;
-          ignoreAllDups = true;
-        };
+      shellAliases = {
+        ll = "ls -l";
+        cdwork = "cd ~/Documents/Work/Aratom/";
+        update = "sudo nixos-rebuild switch |& nom";
+        modhome = "sudo nvim /etc/nixos/user/home.nix";
+        modsys = "sudo nvim /etc/nixos/configuration.nix";
+        work = "cd ~/code/work";
+        personal = "cd ~/code/personal";
+        rocket = "cd ~/code/work/rocket/rocket_caddis_original_fw/SW";
+        communal = "cd ~/code/personal/communal/communal_app";
       };
 
-      programs.alacritty = {
-        enable = true;
-        catppuccin.enable = true;
-        settings = {
-          env = {
-            TERM = "xterm-256color";
-          };
-        };
-      };
-      
-      programs.tmux = {
-        enable = true;
-        shortcut = "g";
-        extraConfig = ''
-            set  default-terminal "xterm-256color"
-            set  terminal-overrides ",*:RGB"
-            set  base-index 1
-            setw pane-base-index 1
-            set  escape-time 20
-        ''; 
+      syntaxHighlighting.enable = true;
+      autosuggestion.enable = true;
+
+      syntaxHighlighting.highlighters = ["brackets" "main" "cursor"];
+
+      history = {
+        ignoreDups = true;
+        ignoreAllDups = true;
       };
     };
 
-    catppuccin.flavor = "mocha";
-    catppuccin.enable = true;
-
-    programs.nixvim = {
+    programs.alacritty = {
       enable = true;
-      
-      extraLuaPackages = ps: [ ps.jsregexp ];
-
-      opts = {
-        number = true;
-        clipboard = "unnamedplus";
-        relativenumber = true;
-        shiftwidth = 4;
+      catppuccin.enable = true;
+      settings = {
+        env = {
+          TERM = "xterm-256color";
+        };
       };
+    };
 
-      globals.mapleader = ",";
+    programs.tmux = {
+      enable = true;
+      shortcut = "g";
+      extraConfig = ''
+        set  default-terminal "xterm-256color"
+        set  terminal-overrides ",*:RGB"
+        set  base-index 1
+        setw pane-base-index 1
+        set  escape-time 20
+      '';
+    };
+  };
 
-      plugins = {
-        lualine.enable = true;
-        nvim-colorizer.enable = true;
-        luasnip.enable = true;
-        rainbow-delimiters.enable = true;
+  catppuccin.flavor = "mocha";
+  catppuccin.enable = true;
 
-        telescope = {
-          enable = true;
-          
-          settings = {
-            defaults = {
-              file_ignore_patterns = [
-                "^.git/" 
-                "^build/"
-                "^.cache/"
-              ];
-            };
+  programs.nixvim = {
+    enable = true;
 
-            layout_config = {
-              prompt_position = "top";
-            };
-          };
+    extraLuaPackages = ps: [ps.jsregexp];
 
-          keymaps = {  
-              "<leader>p" = {
-                action = "live_grep";
-                options = {
-                  desc = "Grep in root dir";
-                };
-              };
-              "<C-p>" = {
-                action = "find_files";
-                options = {
-                  desc = "Find files root dir";
-                };
-              };
-              "<C-o>" = {
-                action = "git_files";
-                options = {
-                  desc = "Find git files";
-                };
-              };
-            }; 
-          };
+    opts = {
+      number = true;
+      clipboard = "unnamedplus";
+      relativenumber = true;
+      shiftwidth = 4;
+    };
 
-          treesitter = {
-            enable = true;
-          };
+    globals.mapleader = ",";
 
-          lsp = {
-            enable = true;
+    plugins = {
+      lualine.enable = true;
+      nvim-colorizer.enable = true;
+      luasnip.enable = true;
+      rainbow-delimiters.enable = true;
 
-            servers = {
-              lua-ls.enable = true;
-              ccls.enable = true;
-              nixd.enable = true;
-              dartls.enable = true; 
-            };
-            
-            keymaps = {
-              lspBuf = {
-                "<C-m>" = "code_action";
-                "<C-n>" = "hover";
-                "<C-i>" = "format";
-                "<leader>ld" = "definition";
-                "<leader>lD" = "references";
-                "<leader>lt" = "type_definition";
-                "<leader>li" = "implementation";
-                "<leader>lr" = "rename";
-              };
-            };
+      telescope = {
+        enable = true;
 
-          };
-
-          cmp = {
-            enable = true;
-            autoEnableSources = true;
-            settings.sources = [
-              { name = "nvim_lsp";}
-              { name = "path";}
-              { name = "buffer";}
+        settings = {
+          defaults = {
+            file_ignore_patterns = [
+              "^.git/"
+              "^build/"
+              "^.cache/"
             ];
-            settings.snippet = {
-              expand = ''
-              function(args)
-              require('luasnip').lsp_expand(args.body)
-              end
-              '';
-            };
-            settings.mapping = {
-              "<C-Space>" = "cmp.mapping.complete()";
-              "<C-e>" = "cmp.mapping.close()";
-              "<CR>" = "cmp.mapping.confirm({ select = true })";
-              "<Tab>" = "cmp.mapping.confirm({ select = true })";
-              "<Up>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
-              "<Down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-            };
-
           };
 
-         
+          layout_config = {
+            prompt_position = "top";
+          };
+        };
+
+        keymaps = {
+          "<leader>p" = {
+            action = "live_grep";
+            options = {
+              desc = "Grep in root dir";
+            };
+          };
+          "<C-p>" = {
+            action = "find_files";
+            options = {
+              desc = "Find files root dir";
+            };
+          };
+          "<C-o>" = {
+            action = "git_files";
+            options = {
+              desc = "Find git files";
+            };
+          };
+        };
       };
 
-      extraPlugins = with pkgs.vimPlugins; [
-        gruvbox
-        rose-pine
-        catppuccin-nvim
-        vim-nix
-        lspkind-nvim
-      ];
+      treesitter = {
+        enable = true;
+      };
 
-      keymaps = []; 
+      lsp = {
+        enable = true;
 
-      colorscheme = "catppuccin";
+        servers = {
+          lua-ls.enable = true;
+          ccls.enable = true;
+          nixd.enable = true;
+          dartls.enable = true;
+        };
+
+        keymaps = {
+          lspBuf = {
+            "<C-m>" = "code_action";
+            "<C-n>" = "hover";
+            "<C-i>" = "format";
+            "<leader>ld" = "definition";
+            "<leader>lD" = "references";
+            "<leader>lt" = "type_definition";
+            "<leader>li" = "implementation";
+            "<leader>lr" = "rename";
+          };
+        };
+      };
+
+      cmp = {
+        enable = true;
+        autoEnableSources = true;
+        settings.sources = [
+          {name = "nvim_lsp";}
+          {name = "path";}
+          {name = "buffer";}
+        ];
+        settings.snippet = {
+          expand = ''
+            function(args)
+            require('luasnip').lsp_expand(args.body)
+            end
+          '';
+        };
+        settings.mapping = {
+          "<C-Space>" = "cmp.mapping.complete()";
+          "<C-e>" = "cmp.mapping.close()";
+          "<CR>" = "cmp.mapping.confirm({ select = true })";
+          "<Tab>" = "cmp.mapping.confirm({ select = true })";
+          "<Up>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+          "<Down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+        };
+      };
+    };
+
+    extraPlugins = with pkgs.vimPlugins; [
+      gruvbox
+      rose-pine
+      catppuccin-nvim
+      vim-nix
+      lspkind-nvim
+    ];
+
+    keymaps = [];
+
+    colorscheme = "catppuccin";
   };
 }
-
