@@ -61,6 +61,13 @@ in {
     catppuccin.flavor = "mocha";
     catppuccin.enable = true;
 
+    home.sessionPath = [
+      "~/Android/"
+      "~/Android/Sdk/build-tools/"
+      "~/Android/Sdk/platform-tools/"
+      "~/Android/Sdk/build-tools/35.0.0/"
+    ];
+
     programs.git = {
       enable = true;
       userName = "Hayk Darbinyan";
