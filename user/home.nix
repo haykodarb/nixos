@@ -55,6 +55,7 @@ in {
       alejandra
       obs-studio
       kdenlive
+      betterdiscordctl
     ];
 
 
