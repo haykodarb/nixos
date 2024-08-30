@@ -81,6 +81,7 @@ in {
       shellAliases = {
         ll = "ls -l";
         rebuild = "~/nixos/rebuild.zsh";
+        rewrite = "nvim ~/nixos";
         work = "cd ~/code/work";
         personal = "cd ~/code/personal";
         rocket = "cd ~/code/work/rocket/rocket_caddis_original_fw/SW";
