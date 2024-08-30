@@ -37,9 +37,6 @@ in {
       slack
       electron
       lazygit
-      android-tools
-      android-studio-tools
-      android-studio
       catppuccin-gtk
       catppuccin-kde
       catppuccin-qt5ct
@@ -62,11 +59,7 @@ in {
     catppuccin.enable = true;
 
     home.sessionPath = [
-      "~/Android/"
-      "~/Android/Sdk/build-tools/"
-      "~/Android/Sdk/platform-tools/"
-      "~/Android/Sdk/build-tools/35.0.0/"
-    ];
+   ];
 
     programs.git = {
       enable = true;
@@ -93,7 +86,6 @@ in {
         personal = "cd ~/code/personal";
         rocket = "cd ~/code/work/rocket/rocket_caddis_original_fw/SW";
         communal = "cd ~/code/personal/communal/communal_app";
-        ANDROID_HOME = "~/Android/Sdk/platform-tools/";
       };
 
       syntaxHighlighting.enable = true;

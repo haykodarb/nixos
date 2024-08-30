@@ -1,7 +1,6 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 {
-  config,
   pkgs,
   ...
 }: {
@@ -61,7 +60,7 @@
   # Set your time zone.
   time.timeZone = "America/Argentina/Mendoza";
 
-  # Select internationalisation properties.
+# Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
