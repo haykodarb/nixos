@@ -110,6 +110,7 @@
   #};
 
   programs.firefox.enable = true;
+  programs.adb.enable = true;
 
   services.displayManager.sddm.catppuccin.enable = false;
   boot.loader.grub.catppuccin.enable = true;
@@ -118,7 +119,7 @@
   users.users.hayk = {
     isNormalUser = true;
     description = "Hayk";
-    extraGroups = ["networkmanager" "wheel" "audio" "dialout"];
+    extraGroups = ["networkmanager" "adb" "wheel" "audio" "dialout"];
     packages = with pkgs; [
       kdePackages.kate
     ];
