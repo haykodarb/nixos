@@ -221,12 +221,7 @@ in {
           dartls.enable = true;
           ccls = {
             enable = true;
-            extraOptions = {
-              init_options = {
-                cache = {
-                  directory = "~/tmp/ccls-cache";
-                };
-              };
+            initOptions.cache.directory = "~/tmp/ccls-cache/";
             };
           };
         };  
