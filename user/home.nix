@@ -25,7 +25,6 @@ in {
       ripgrep
       fd
       bear
-      flutter
       jdk17
       gnumake
       gcc-arm-embedded
