@@ -222,7 +222,6 @@ in {
           ccls = {
             enable = true;
             initOptions.cache.directory = "~/tmp/ccls-cache/";
-            };
           };
         };  
 
