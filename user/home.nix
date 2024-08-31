@@ -159,6 +159,8 @@ in {
         buffers = {
           followCurrentFile.enabled = true;
         };
+        window.width = 30;
+        window.position = "right";
       };
 
       telescope = {
