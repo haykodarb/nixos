@@ -56,6 +56,7 @@ in {
       obs-studio
       kdenlive
       logseq
+      marktext
     ];
 
 
