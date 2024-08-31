@@ -155,12 +155,15 @@ in {
         enableDiagnostics = true;
         enableModifiedMarkers = true;
         enableRefreshOnWrite = true;
+        closeIfLastWindow = true;
         defaultSource = "buffers";
+        resizeTimerInterval = -1;
         buffers = {
           followCurrentFile.enabled = true;
         };
         window.width = 30;
         window.position = "right";
+
       };
 
       telescope = {
