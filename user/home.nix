@@ -151,7 +151,7 @@ in {
       rainbow-delimiters.enable = true;
 
       neo-tree = {
-        enable = true;
+        enable = false;
         enableGitStatus = true;
         enableDiagnostics = true;
         enableModifiedMarkers = true;
