@@ -75,7 +75,6 @@ in {
     programs.zsh = {
       enable = true;
       enableCompletion = true;
-
       initExtra = "
           DISABLE_AUTO_UPDATE=\"true\"\n
           source ~/.nix-profile/share/git/contrib/completion/git-prompt.sh \n
@@ -87,7 +86,6 @@ in {
         ll = "ls -l";
         rebuild = "~/nixos/rebuild.zsh";
         rewrite = "nvim ~/nixos";
-        readlogs = "tail -f ~/nixos/nixos-switch.log";
         work = "cd ~/code/work";
         personal = "cd ~/code/personal";
         rocket = "cd ~/code/work/rocket/rocket_caddis_original_fw/SW";
