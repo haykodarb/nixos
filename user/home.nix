@@ -148,9 +148,18 @@ in {
       nvim-colorizer.enable = true;
       luasnip.enable = true;
       rainbow-delimiters.enable = true;
-      dashboard.enable = true;
 
-      nvim-tree.enable = true;
+      neo-tree = {
+        enable = true;
+        enableGitStatus = true;
+        enableDiagnostics = true;
+        enableModifiedMarkers = true;
+        enableRefreshOnWrite = true;
+        defaultSource = "buffer";
+        buffers = {
+          followCurrentFile.enabled = true;
+        };
+      };
 
       telescope = {
         enable = true;
