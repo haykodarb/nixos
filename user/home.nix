@@ -150,6 +150,8 @@ in {
       rainbow-delimiters.enable = true;
       dashboard.enable = true;
 
+      nvim-tree.enable = true;
+
       telescope = {
         enable = true;
 
