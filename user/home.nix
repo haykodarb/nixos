@@ -150,6 +150,8 @@ in {
       luasnip.enable = true;
       rainbow-delimiters.enable = true;
 
+      markdown-previewer.enable = true;
+
       neo-tree = {
         enable = false;
         enableGitStatus = true;
@@ -164,7 +166,6 @@ in {
         };
         window.width = 30;
         window.position = "right";
-
       };
 
       telescope = {
