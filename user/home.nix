@@ -150,7 +150,7 @@ in {
       luasnip.enable = true;
       rainbow-delimiters.enable = true;
 
-      markdown-previewer.enable = true;
+      markdown-preview.enable = true;
 
       neo-tree = {
         enable = false;
