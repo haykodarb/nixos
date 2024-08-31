@@ -33,12 +33,8 @@ in {
       gcc
       qgroundcontrol
       thunderbird
-      (discord.override {
-        # remove any overrides that you don't want
-        withOpenASAR = true;
-        withVencord = true;
-      })
       slack
+      discord
       electron
       lazygit
       catppuccin-gtk
@@ -89,6 +85,7 @@ in {
         ll = "ls -l";
         rebuild = "~/nixos/rebuild.zsh";
         rewrite = "nvim ~/nixos";
+        readlogs = "tail -f ~/nixos/nixos-switch.log";
         work = "cd ~/code/work";
         personal = "cd ~/code/personal";
         rocket = "cd ~/code/work/rocket/rocket_caddis_original_fw/SW";
