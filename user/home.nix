@@ -148,6 +148,7 @@ in {
       nvim-colorizer.enable = true;
       luasnip.enable = true;
       rainbow-delimiters.enable = true;
+      dashboard.enable = true;
 
       telescope = {
         enable = true;
