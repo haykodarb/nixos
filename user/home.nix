@@ -155,7 +155,7 @@ in {
         enableDiagnostics = true;
         enableModifiedMarkers = true;
         enableRefreshOnWrite = true;
-        defaultSource = "buffer";
+        defaultSource = "buffers";
         buffers = {
           followCurrentFile.enabled = true;
         };
