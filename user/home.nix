@@ -217,10 +217,19 @@ in {
 
         servers = {
           lua-ls.enable = true;
-          ccls.enable = true;
           nixd.enable = true;
           dartls.enable = true;
-        };
+          ccls = {
+            enable = true;
+            extraOptions = {
+              init_options = {
+                cache = {
+                  directory = "~/tmp/ccls-cache";
+                };
+              };
+            };
+          };
+        };  
 
         keymaps = {
           lspBuf = {
