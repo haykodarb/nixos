@@ -56,6 +56,7 @@ in {
       kdenlive
       logseq
       marktext
+      vlc
     ];
 
 
