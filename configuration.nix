@@ -126,6 +126,8 @@
     extraGroups = ["networkmanager" "wheel" "audio" "dialout"];
     packages = with pkgs; [
       kdePackages.kate
+      android-studio
+      flutter
     ];
   };
 
