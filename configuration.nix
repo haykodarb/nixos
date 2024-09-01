@@ -129,8 +129,6 @@
     packages = with pkgs; [
       kdePackages.kate
       android-studio
-      android-studio-tools
-      android-tools
       flutter
     ];
   };
