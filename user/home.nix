@@ -57,6 +57,7 @@ in {
       logseq
       marktext
       vlc
+      onedrivegui
     ];
 
 
