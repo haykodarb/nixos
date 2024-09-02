@@ -58,6 +58,7 @@ in {
       marktext
       vlc
       zoxide
+      util-linux
     ];
 
 
