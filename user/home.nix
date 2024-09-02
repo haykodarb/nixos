@@ -278,6 +278,6 @@ in {
     };
     colorschemes.catppuccin.enable = true;
 
-    colorscheme = "rose-pine";
+    colorscheme = "catppuccin";
   };
 }
