@@ -273,6 +273,9 @@ in {
     keymaps = [];
     
     colorschemes.rose-pine.enable = true;
+    colorschemes.rose-pine.settings = {
+      dark_variant = "moon";
+    };
     colorschemes.catppuccin.enable = true;
 
     colorscheme = "rose-pine";
