@@ -57,6 +57,7 @@ in {
       logseq
       marktext
       vlc
+      zoxide
     ];
 
 
@@ -265,14 +266,15 @@ in {
 
     extraPlugins = with pkgs.vimPlugins; [
       gruvbox
-      rose-pine
-      catppuccin-nvim
       vim-nix
       lspkind-nvim
     ];
 
     keymaps = [];
+    
+    colorschemes.rose-pine.enable = true;
+    colorschemes.catppuccin.enable = true;
 
-    colorscheme = "catppuccin";
+    colorscheme = "rose-pine";
   };
 }
