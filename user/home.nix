@@ -190,19 +190,19 @@ in {
 
         keymaps = {
           "<leader>p" = {
-            action = "live_grep";
+            action = "live_grep shorten_path=true";
             options = {
               desc = "Grep in root dir";
             };
           };
           "<C-p>" = {
-            action = "find_files";
+            action = "find_files shorten_path=true";
             options = {
               desc = "Find files root dir";
             };
           };
           "<C-o>" = {
-            action = "git_files";
+            action = "git_files shorten_path=true";
             options = {
               desc = "Find git files";
             };
