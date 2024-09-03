@@ -116,8 +116,6 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
-  programs.adb.enable = true;
-
   services.displayManager.sddm.catppuccin.enable = false;
   boot.loader.grub.catppuccin.enable = true;
 
@@ -125,11 +123,9 @@
   users.users.hayk = {
     isNormalUser = true;
     description = "Hayk";
-    extraGroups = ["networkmanager" "adb" "wheel"  "audio" "dialout"];
+    extraGroups = ["networkmanager" "wheel"  "audio" "dialout"];
     packages = with pkgs; [
       kdePackages.kate
-      android-studio
-      flutter
     ];
   };
 
