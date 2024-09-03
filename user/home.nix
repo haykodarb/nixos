@@ -80,7 +80,6 @@ in {
       enable = true;
       enableCompletion = true;
       initExtra = "
-          DISABLE_AUTO_UPDATE=\"true\"\n
           source ~/.nix-profile/share/git/contrib/completion/git-prompt.sh \n
           setopt PROMPT_SUBST \n
           PS1='%F{red} [ %f%F{cyan}%2~%f%F{red} ] [%f%F{yellow}$(__git_ps1 \" %s \")%f%F{red}] \n > %f'
@@ -121,10 +120,10 @@ in {
       enable = true;
       shortcut = "g";
       extraConfig = ''
+        set-option -g default-shell $SHELL
         set  default-terminal "xterm-256color"
         set  terminal-overrides ",*:RGB"
         set  escape-time 20
-        set-option -g default-shell $SHELL
       '';
         #set  base-index 1
         #setw pane-base-index 1
