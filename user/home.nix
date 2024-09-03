@@ -59,6 +59,7 @@ in {
       vlc
       zoxide
       util-linux
+      calc
     ];
 
 
