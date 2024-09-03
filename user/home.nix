@@ -124,6 +124,7 @@ in {
         set  default-terminal "xterm-256color"
         set  terminal-overrides ",*:RGB"
         set  escape-time 20
+        set-option -g default-shell $SHELL
       '';
         #set  base-index 1
         #setw pane-base-index 1
