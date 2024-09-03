@@ -60,6 +60,7 @@ in {
       zoxide
       util-linux
       calc
+      teams
     ];
 
 
