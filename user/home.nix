@@ -123,10 +123,10 @@ in {
       extraConfig = ''
         set  default-terminal "xterm-256color"
         set  terminal-overrides ",*:RGB"
-        set  base-index 1
-        setw pane-base-index 1
         set  escape-time 20
       '';
+        #set  base-index 1
+        #setw pane-base-index 1
     };
   };
 
