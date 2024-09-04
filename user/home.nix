@@ -188,7 +188,8 @@ in {
           layout_config = {
             prompt_position = "top";
           };
-          path_display = "truncate";
+
+          path_display = [ "truncate" ];
         };
 
         keymaps = {
