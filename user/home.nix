@@ -63,6 +63,7 @@ in {
       teams-for-linux
       inkscape
       python3
+      conda
     ];
 
 
