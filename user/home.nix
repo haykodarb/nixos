@@ -62,8 +62,8 @@ in {
       calc
       teams-for-linux
       inkscape
-      python3
-      conda
+      # support both 32- and 64-bit applications
+      wineWowPackages.stable
     ];
 
 
