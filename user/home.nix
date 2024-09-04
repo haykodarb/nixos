@@ -193,21 +193,24 @@ in {
 
         keymaps = {
           "<leader>p" = {
-            action = "live_grep shorten_path=true";
+            action = "live_grep";
             options = {
               desc = "Grep in root dir";
+              shorten_path = true;
             };
           };
           "<C-p>" = {
-            action = "find_files shorten_path=true";
+            action = "find_files"; 
             options = {
               desc = "Find files root dir";
+              shorten_path = true;
             };
           };
           "<C-o>" = {
-            action = "git_files shorten_path=true";
+            action = "git_files";
             options = {
               desc = "Find git files";
+              shorten_path = true;
             };
           };
         };
