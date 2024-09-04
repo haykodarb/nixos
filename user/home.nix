@@ -21,57 +21,18 @@ in {
 
     home.stateVersion = "24.05";
     home.packages = with pkgs; [
-      btop
-      ripgrep
-      fd
-      bear
-      jdk17
-      gnumake
-      gcc-arm-embedded
-      openocd
-      gcc
-      qgroundcontrol
-      thunderbird
-      slack
-      discord
-      electron
-      lazygit
-      catppuccin-gtk
-      catppuccin-kde
-      catppuccin-qt5ct
-      catppuccin-cursors
-      catppuccinifier-gui
-      libreoffice-qt
-      nethogs
-      xclip
-      gnome.gnome-disk-utility
-      udisks
-      qbittorrent
-      remmina
-      woeusb-ng
-      ntfs3g
-      apmplanner2
-      alejandra
-      obs-studio
-      kdenlive
-      logseq
-      marktext
-      vlc
-      zoxide
-      util-linux
-      calc
-      teams-for-linux
-      inkscape
-      # support both 32- and 64-bit applications
-      wineWowPackages.stable
+      btop ripgrep fd bear jdk17 gnumake gcc-arm-embedded openocd gcc qgroundcontrol thunderbird slack discord
+      electron lazygit catppuccin-gtk catppuccin-kde catppuccin-qt5ct catppuccin-cursors catppuccinifier-gui libreoffice-qt
+      nethogs xclip gnome.gnome-disk-utility udisks qbittorrent remmina woeusb-ng
+      ntfs3g apmplanner2 alejandra obs-studio kdenlive logseq marktext vlc zoxide util-linux
+      calc teams-for-linux inkscape stremio
     ];
 
 
     catppuccin.flavor = "mocha";
     catppuccin.enable = true;
 
-    home.sessionPath = [
-   ];
+    home.sessionPath = [];
 
     programs.git = {
       enable = true;
