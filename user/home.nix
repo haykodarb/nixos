@@ -62,6 +62,7 @@ in {
       calc
       teams-for-linux
       inkscape
+      python3
     ];
 
 
