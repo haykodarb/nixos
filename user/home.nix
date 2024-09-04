@@ -185,10 +185,10 @@ in {
               "^.cache/"
             ];
           };
-
           layout_config = {
             prompt_position = "top";
           };
+          path_display = "smart";
         };
 
         keymaps = {
@@ -196,21 +196,18 @@ in {
             action = "live_grep";
             options = {
               desc = "Grep in root dir";
-              shorten_path = true;
             };
           };
           "<C-p>" = {
             action = "find_files"; 
             options = {
               desc = "Find files root dir";
-              shorten_path = true;
             };
           };
           "<C-o>" = {
             action = "git_files";
             options = {
               desc = "Find git files";
-              shorten_path = true;
             };
           };
         };
