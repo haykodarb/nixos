@@ -61,6 +61,7 @@ in {
       util-linux
       calc
       teams-for-linux
+      inkscape
     ];
 
 
