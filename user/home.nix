@@ -184,12 +184,14 @@ in {
               "^build/"
               "^.cache/"
             ];
+            path_display = [
+              "truncate"
+            ];
           };
+
           layout_config = {
             prompt_position = "top";
           };
-
-          path_display = [ "truncate" ];
         };
 
         keymaps = {
