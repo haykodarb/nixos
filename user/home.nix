@@ -190,7 +190,7 @@ in {
           dartls.enable = true;
           ccls = {
             enable = true;
-            initOptions.cache.directory = "/home/hayk/tmp/ccls-cache/";
+            initOptions.cache.directory = "/tmp/ccls-cache";
           };
         };  
 
