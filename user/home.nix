@@ -146,7 +146,9 @@ in {
               "^.cache/"
             ];
             path_display = [
-              "truncate"
+              "filename_first"
+              #"truncate"
+
             ];
           };
 
