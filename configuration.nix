@@ -129,7 +129,7 @@
   users.users.hayk = {
     isNormalUser = true;
     description = "Hayk";
-    extraGroups = ["networkmanager" "wheel"  "audio" "dialout"];
+    extraGroups = ["networkmanager" "wheel" "plugdev" "audio" "dialout"];
     packages = with pkgs; [
       kdePackages.kate
     ];
