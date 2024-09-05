@@ -119,6 +119,11 @@
   services.displayManager.sddm.catppuccin.enable = false;
   boot.loader.grub.catppuccin.enable = true;
 
+  virtualisation.docker.rootless = {
+    enable = true;
+    setSocketVariable = true;
+  };
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.hayk = {
     isNormalUser = true;
