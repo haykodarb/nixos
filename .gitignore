@@ -2,3 +2,5 @@ output.log
 shells/flutter/.android
 shells/flutter/.devenv
 shells/flutter/.devenv.flake.nix
+shells/flutter/devenv.lock
+
