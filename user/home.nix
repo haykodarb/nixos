@@ -191,11 +191,10 @@ in {
           lua-ls.enable = true;
           nixd.enable = true;
           dartls.enable = true;
-          #ccls = {
-          #  enable = true;
-          #  initOptions.cache.directory = "/tmp/ccls-cache";
-          #};
-          clangd.enable = true;
+          ccls = {
+            enable = true;
+            initOptions.cache.directory = "/tmp/ccls-cache";
+          };
         };  
 
         keymaps = {
