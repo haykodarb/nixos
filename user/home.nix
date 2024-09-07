@@ -253,12 +253,35 @@ in {
             c = [
               { 
                 name = "Attach to port :3333 (Ideally)";
-                request = "attach";
                 type = "gdb";
-                target = "extended-remote localhost:3333";
+                request = "launch";
                 cwd = "\${workspaceFolder}/build/";
                 program = "caddis.elf";
+                MIMode = "gdb";
+                miDebuggerPath = "gdb";
                 stopAtEntry = true;
+                setupCommands = [
+                    {
+                      text = "target extended-remote localhost:3333";
+                      description = "Connect to openocd server";
+                      ignoreFailures = false;
+                    }
+                    {
+                      text = "file /home/hayk/code/work/rocket/rocket_caddis_original_fw/SW/build/caddis.elf";
+                      description = "Loads file into GDB";
+                      ignoreFailures = false;
+                    }
+                    {
+                      text = "load";
+                      description = "Uploads file to uC flash";
+                      ignoreFailures = false;
+                    }
+                    {
+                      text = "monitor reset init";
+                      description = "Resets uC program";
+                      ignoreFailures = false;
+                    }
+                ];
                 #program.__raw = ''
                # function()
                # return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. '/build/', "file")
