@@ -254,23 +254,24 @@ in {
               { 
                 name = "Attach to port :3333 (Ideally)";
                 type = "gdb";
-                request = "launch";
+                request = "attach";
+                target = "extended-remote localhost:3333";
                 cwd = "\${workspaceFolder}";
                 program = "/home/hayk/code/work/rocket/rocket_caddis_original_fw/SW/build/caddis.elf";
                 MIMode = "gdb";
                 miDebuggerPath = "/home/hayk/.nix-profile/bin/gdb";
                 stopAtEntry = true;
                 setupCommands = [
-                    {
-                      text = "target extended-remote localhost:3333";
-                      description = "Connect to openocd server";
-                      ignoreFailures = false;
-                    }
-                    {
-                      text = "file /home/hayk/code/work/rocket/rocket_caddis_original_fw/SW/build/caddis.elf";
-                      description = "Loads file into GDB";
-                      ignoreFailures = false;
-                    }
+                   # {
+                   #   text = "target extended-remote localhost:3333";
+                   #   description = "Connect to openocd server";
+                   #   ignoreFailures = false;
+                   # }
+                   # {
+                   #   text = "file /home/hayk/code/work/rocket/rocket_caddis_original_fw/SW/build/caddis.elf";
+                   #   description = "Loads file into GDB";
+                   #   ignoreFailures = false;
+                   # }
                     {
                       text = "load";
                       description = "Uploads file to uC flash";
