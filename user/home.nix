@@ -256,7 +256,7 @@ in {
                 type = "gdb";
                 request = "launch";
                 cwd = "\${workspaceFolder}/build/";
-                program = "caddis.elf";
+                program = "/home/hayk/code/work/rocket/rocket_caddis_original_fw/SW/build/caddis.elf";
                 MIMode = "gdb";
                 miDebuggerPath = "gdb";
                 stopAtEntry = true;
