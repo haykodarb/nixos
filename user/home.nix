@@ -253,13 +253,17 @@ in {
             c = [
               { 
                 name = "Attach to port :3333 (Ideally)";
-                request = "attach";
+                request = "launch";
                 type = "gdb";
-                target = "localhost:3333";
+                # target = "localhost:3333";
                 cwd = "\${workspaceFolder}";
+                stopAtEntry = true;
+                MIMode = "gdb";
+                miDebuggerServerAddress = "localhost:3333";
+                miDebuggerPath = "/home/hayk/.nix-profile/bin/gdb";
                 program.__raw = ''
                 function()
-                return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. '/', "file")
+                return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. '/build/', "file")
                 end'';
               }
             ];
