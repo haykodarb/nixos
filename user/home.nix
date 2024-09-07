@@ -253,15 +253,16 @@ in {
             c = [
               { 
                 name = "Attach to port :3333 (Ideally)";
-                request = "launch";
+                request = "attach";
                 type = "gdb";
-                target = "extended-remote :3333";
-                cwd = "\${workspaceFolder}";
+                target = "localhost:3333";
+                cwd = "\${workspaceFolder}/build/";
+                program = "caddis.elf";
                 stopAtEntry = true;
-                program.__raw = ''
-                function()
-                return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. '/build/', "file")
-                end'';
+                #program.__raw = ''
+               # function()
+               # return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. '/build/', "file")
+               # end'';
               }
             ];
           };
