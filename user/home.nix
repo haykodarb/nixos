@@ -255,7 +255,8 @@ in {
                 name = "Attach to port :3333 (Ideally)";
                 type = "gdb";
                 request = "launch";
-                cwd = "\${workspaceFolder}/build/";
+                cwd = "\${workspaceFolder}";
+                program = "/home/hayk/code/work/rocket/rocket_caddis_original_fw/SW/build/caddis.elf";
                 MIMode = "gdb";
                 miDebuggerPath = "/home/hayk/.nix-profile/bin/gdb";
                 stopAtEntry = true;
