@@ -255,7 +255,7 @@ in {
                 name = "Attach to port :3333 (Ideally)";
                 request = "attach";
                 type = "gdb";
-                target = "localhost:3333";
+                target = "extended-remote localhost:3333";
                 cwd = "\${workspaceFolder}/build/";
                 program = "caddis.elf";
                 stopAtEntry = true;
