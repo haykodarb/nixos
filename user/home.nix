@@ -250,16 +250,18 @@ in {
             };
           };
           configurations = {
-            c = { 
-              name = "Attach to port :3333 (Ideally)";
-              request = "attach";
-              type = "gdb";
-              target = "localhost:3333";
-              program = "function()
-              return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-              end"; 
-              cwd = "\${workspaceFolder}";
-            };
+            c = [
+              { 
+                name = "Attach to port :3333 (Ideally)";
+                request = "attach";
+                type = "gdb";
+                target = "localhost:3333";
+                program = "function()
+                return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                end"; 
+                cwd = "\${workspaceFolder}";
+              }
+            ];
           };
           extensions = {
             dap-ui = {
