@@ -229,7 +229,6 @@ in {
         settings.mapping = {
           "<C-Space>" = "cmp.mapping.complete()";
           "<C-e>" = "cmp.mapping.close()";
-          "<CR>" = "cmp.mapping.confirm({ select = true })";
           "<Tab>" = "cmp.mapping.confirm({ select = true })";
           "<Up>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
           "<Down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
@@ -242,11 +241,24 @@ in {
             executables = {
               gdb = {
                 command = "gdb";
+                id = "gdb";
                 args = [
-                  "-i"
-                  "dap"
+                  "--quiet"
+                  "--interpreter=dap"
                 ];
               };
+            };
+          };
+          configurations = {
+            c = { 
+              name = "Attach to port :3333 (Ideally)";
+              request = "attach";
+              type = "gdb";
+              target = "localhost:3333";
+              program = "function()
+              return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+              end"; 
+              cwd = "\${workspaceFolder}";
             };
           };
           extensions = {
