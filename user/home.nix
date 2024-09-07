@@ -257,7 +257,7 @@ in {
                 request = "launch";
                 cwd = "\${workspaceFolder}/build/";
                 MIMode = "gdb";
-                miDebuggerPath = "gdb";
+                miDebuggerPath = "/home/hayk/.nix-profile/bin/gdb";
                 stopAtEntry = true;
                 setupCommands = [
                     {
