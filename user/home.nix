@@ -256,10 +256,11 @@ in {
                 request = "attach";
                 type = "gdb";
                 target = "localhost:3333";
-                program = "function()
-                return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
-                end"; 
                 cwd = "\${workspaceFolder}";
+                program.__raw = ''
+                function()
+                return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. '/', "file")
+                end'';
               }
             ];
           };
