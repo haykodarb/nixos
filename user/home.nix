@@ -106,7 +106,6 @@ in {
     opts = {
       number = true;
       clipboard = "unnamedplus";
-      relativenumber = true;
       shiftwidth = 4;
     };
 
