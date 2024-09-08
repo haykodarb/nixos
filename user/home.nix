@@ -112,6 +112,11 @@ in {
 
     globals.mapleader = ",";
 
+    globals.termdebug_config = {
+      variables_window_height = 15;
+      wide = 1;
+    };
+
     plugins = {
       lualine.enable = true;
       nvim-colorizer.enable = true;
