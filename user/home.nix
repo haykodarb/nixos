@@ -118,7 +118,6 @@ in {
 
     plugins = {
       lualine.enable = true;
-      bufferline.enable = true;
       nvim-colorizer.enable = true;
       luasnip.enable = true;
       rainbow-delimiters.enable = true;
