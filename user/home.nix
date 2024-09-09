@@ -170,9 +170,9 @@ in {
             };
           };
           "<leader>o" = {
-            action = "buffers";
+            action = "git_files";
             options = {
-              desc = "Search open buffers";
+              desc = "Search git files";
             };
           };
           "<C-p>" = {
@@ -182,9 +182,9 @@ in {
             };
           };
           "<C-o>" = {
-            action = "git_files";
+            action = "buffers";
             options = {
-              desc = "Find git files";
+              desc = "Search open buffers";
             };
           };
         };
