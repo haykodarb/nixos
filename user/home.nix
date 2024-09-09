@@ -169,6 +169,12 @@ in {
               desc = "Grep in root dir";
             };
           };
+          "<leader>o" = {
+            action = "buffers";
+            options = {
+              desc = "Search open buffers";
+            };
+          };
           "<C-p>" = {
             action = "find_files"; 
             options = {
