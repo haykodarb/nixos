@@ -101,6 +101,11 @@ in {
   programs.nixvim = {
     enable = true;
 
+    autoCmd = {
+      event = "VimEnter";
+      command = "packadd termdebug";
+    };
+
     extraLuaPackages = ps: [ps.jsregexp];
 
     opts = {
@@ -253,7 +258,22 @@ in {
       lspkind-nvim
     ];
 
-    keymaps = [];
+    keymaps = [
+      # Those are somewhat doom-emacs keybinds...
+      {
+        # Escape out of terminal
+        mode = "t";
+        key = "<Esc><Esc>";
+        action = "<C-\\><C-n>";
+      }
+      {
+	# Escape to remove highlight
+	mode = "n";
+	key = "<Esc><Esc>";
+	action = ":noh<CR>";
+	options.silent = true;
+      }
+    ];
     
     colorschemes.rose-pine.enable = true;
     colorschemes.rose-pine.settings = {
