@@ -277,9 +277,13 @@ in {
       }
       {
         # Delete GDB program window and shift GDB to the right and set width to 80.
-        mode = "t";
-        key = "<leader>v";
-        action = "<C-\\><C-n>:Program<CR><C-w>:q!<CR>:Gdb<CR><C-W>L80<C-W>|";
+        key = "<leader>x";
+        action = "<C-\\><C-n>:Program<CR><C-w>:q!<CR>:Gdb<CR><C-W>L70<C-W>|";
+      }
+      {
+        # Delete GDB program window and shift GDB to the right and set width to 80.
+        key = "<leader>z";
+        action = ":Termdebug<CR>";
       }
     ];
     
