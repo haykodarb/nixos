@@ -276,10 +276,10 @@ in {
 	options.silent = true;
       }
       {
-        # Escape out of terminal
+        # Delete GDB program window and shift GDB to the right.
         mode = "t";
         key = "<leader>v";
-        action = "<c-\><c-n>:Program<cr><c-w>:q!<cr>:Gdb<cr>i";
+        action = "<C-\\><C-n>:Program<CR><C-w>:q!<CR>:Gdb<CR>i";
       }
     ];
     
