@@ -285,6 +285,31 @@ in {
         key = "<leader>z";
         action = ":Termdebug<CR>";
       }
+      {
+        key = "<leader>c";
+        action = ":Continue";
+      }
+      {
+        key = "<leader>b";
+        action = ":Break<CR>";
+      }
+      {
+        key = "<leader>v";
+        action = ":Clear<CR>";
+      }
+      {
+        key = "<leader>n";
+        action = ":Over<CR>";
+      }
+      {
+        key = "<leader>s";
+        action = ":Stop<CR>";
+      }
+      {
+        key = "<leader>a";
+        action = ":Run<CR>";
+      }
+
     ];
     
     colorschemes.rose-pine.enable = true;
