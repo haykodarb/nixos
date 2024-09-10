@@ -101,10 +101,12 @@ in {
   programs.nixvim = {
     enable = true;
 
-    autoCmd = {
-      event = "VimEnter";
-      command = "packadd termdebug";
-    };
+    autoCmd = [
+      {
+        event = "VimEnter";
+        command = "packadd termdebug";
+      }
+    ];
 
     extraLuaPackages = ps: [ps.jsregexp];
 
