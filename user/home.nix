@@ -265,13 +265,13 @@ in {
       {
         # Escape out of terminal
         mode = "t";
-        key = "<Esc><Esc>";
+        key = "<Esc>";
         action = "<C-\\><C-n>";
       }
       {
 	# Escape to remove highlight
 	mode = "n";
-	key = "<Esc><Esc>";
+	key = "<Esc>";
 	action = ":noh<CR>";
 	options.silent = true;
       }
