@@ -276,10 +276,10 @@ in {
 	options.silent = true;
       }
       {
-        # Delete GDB program window and shift GDB to the right.
+        # Delete GDB program window and shift GDB to the right and set width to 80.
         mode = "t";
         key = "<leader>v";
-        action = "<C-\\><C-n>:Program<CR><C-w>:q!<CR>:Gdb<CR>i";
+        action = "<C-\\><C-n>:Program<CR><C-w>:q!<CR>:Gdb<CR><C-W>L80<C-W>|";
       }
     ];
     
