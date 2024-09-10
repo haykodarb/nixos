@@ -275,6 +275,12 @@ in {
 	action = ":noh<CR>";
 	options.silent = true;
       }
+      {
+        # Escape out of terminal
+        mode = "t";
+        key = "<leader>v";
+        action = "<c-\><c-n>:Program<cr><c-w>:q!<cr>:Gdb<cr>i";
+      }
     ];
     
     colorschemes.rose-pine.enable = true;
