@@ -26,7 +26,7 @@ in {
       nethogs xclip gnome.gnome-disk-utility udisks qbittorrent remmina woeusb-ng
       ntfs3g apmplanner2 alejandra obs-studio kdenlive logseq marktext vlc zoxide util-linux
       calc teams-for-linux inkscape stremio mavproxy python3 wine64 bitwise fzf  
-      python312Packages.matplotlib
+      python311Packages.matplotlib
     ];
 
 
