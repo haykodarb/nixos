@@ -25,8 +25,11 @@ in {
       electron lazygit catppuccin-gtk catppuccin-kde catppuccin-qt5ct catppuccin-cursors catppuccinifier-gui libreoffice-qt
       nethogs xclip gnome.gnome-disk-utility udisks qbittorrent remmina woeusb-ng
       ntfs3g apmplanner2 alejandra obs-studio kdenlive logseq marktext vlc zoxide util-linux
-      calc teams-for-linux inkscape stremio mavproxy python3 wine64 bitwise fzf  
-      python311Packages.matplotlib
+      calc teams-for-linux inkscape stremio mavproxy  wine64 bitwise fzf  
+
+      (python3.withPackages (python-pkgs: [
+        python-pkgs.matplotlib
+      ]))
     ];
 
 
