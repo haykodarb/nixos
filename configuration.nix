@@ -16,6 +16,7 @@
 
   nixpkgs.config.permittedInsecurePackages = [
     "qtwebkit-5.212.0-alpha4"
+    "electron-27.3.11"
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
