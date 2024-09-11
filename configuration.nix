@@ -14,11 +14,6 @@
     settings.experimental-features = ["nix-command" "flakes"];
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "qtwebkit-5.212.0-alpha4"
-    "electron-27.3.11"
-  ];
-
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Bootloader.
@@ -32,7 +27,6 @@
   hardware.enableAllFirmware = true;
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.support32Bit = true;
-  nixpkgs.config.pulseaudio = true;
   hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
 
   # rtkit is optional but recommended
@@ -142,7 +136,19 @@
   #  services.xserver.displayManager.autoLogin.user = "hayk";
 
   # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs = {
+    config = {
+      permittedInsecurePackages = [
+        "qtwebkit-5.212.0-alpha4"
+        "electron-27.3.11"
+      ];
+      pulseaudio = true;
+      allowUnfree = true;
+      packageOverrides = pkgs: {
+        unstable = import (fetchTarball "https://github.com/NixOS/nixpkgs/archive/nixos-unstable.tar.gz") {};
+      };
+    };
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
