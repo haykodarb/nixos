@@ -153,6 +153,7 @@
     pavucontrol
     neofetch
     nix-output-monitor
+    unstable.gcc-arm-embedded
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
