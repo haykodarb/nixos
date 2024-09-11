@@ -277,12 +277,12 @@ in {
       }
       {
         # Delete GDB program window and shift GDB to the right and set width to 80.
-        key = "<leader>x";
+        key = "<leader>dx";
         action = "<C-\\><C-n>:Program<CR><C-w>:q!<CR>:Gdb<CR><C-W>L70<C-W>|";
       }
       {
         # Delete GDB program window and shift GDB to the right and set width to 80.
-        key = "<leader>z";
+        key = "<leader>dz";
         action = ":Termdebug<CR>";
       }
       {
