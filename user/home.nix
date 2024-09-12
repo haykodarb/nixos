@@ -321,6 +321,7 @@ in {
       dark_variant = "moon";
     };
     colorschemes.catppuccin.enable = true;
+    colorschemes.catppuccin.settings.transparent_background = true;
 
     colorscheme = "catppuccin";
   };
