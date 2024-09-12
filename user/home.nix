@@ -79,6 +79,7 @@ in {
       enable = true;
       catppuccin.enable = true;
       settings = {
+        window.opacity = 0.8;
         env = {
           TERM = "xterm-256color";
         };
