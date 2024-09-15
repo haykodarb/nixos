@@ -89,7 +89,7 @@
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  services.udev.packages = [ pkgs.openocd pkgs.platformio-core ];
+  services.udev.packages = [ pkgs.openocd pkgs.platformio-core pkgs.platformio-core.udev ];
   # Enable sound with pipewire.
   #security.rtkit.enable = true;
   #services.pipewire = {
