@@ -26,6 +26,7 @@ in {
       nethogs xclip gnome.gnome-disk-utility udisks qbittorrent remmina woeusb-ng
       ntfs3g apmplanner2 alejandra obs-studio kdenlive logseq marktext vlc zoxide util-linux
       calc teams-for-linux inkscape stremio mavproxy  wine64 bitwise fzf gdb cmake
+      platformio
 
       (python3.withPackages (python-pkgs: [
         python-pkgs.matplotlib
