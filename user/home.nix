@@ -34,6 +34,16 @@ in {
     ];
 
 
+    android = {
+      enable = true;
+      ndk.enable = true;
+      ndk.version = [ "23.1.7779620" "26.1.10909125" ];
+      cmake.version = [ "3.18.1" "3.22.1" ]; 
+      platforms.version = [ "31" "32" "34" ];
+      flutter.enable = true;
+    };
+
+
     catppuccin.flavor = "mocha";
     catppuccin.enable = true;
 
