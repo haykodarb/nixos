@@ -39,6 +39,12 @@ in {
 
     home.sessionPath = [];
 
+    programs.direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+      enableZshIntegration = true;
+    };
+    
     programs.git = {
       enable = true;
       userName = "Hayk Darbinyan";
@@ -52,6 +58,7 @@ in {
           source ~/.nix-profile/share/git/contrib/completion/git-prompt.sh \n
           setopt PROMPT_SUBST \n
           PS1='%F{red} [ %f%F{cyan}%2~%f%F{red} ] [%f%F{yellow}$(__git_ps1 \" %s \")%f%F{red}] \n > %f'
+          eval \"$(direnv hook zsh)\"
         ";
 
       shellAliases = {
