@@ -15,6 +15,8 @@
     settings.trusted-users = [ "root" "hayk" ];
   };
 
+  security.sudo.wheelNeedsPassword = false;
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Bootloader.
