@@ -12,6 +12,7 @@
 
   nix = {
     settings.experimental-features = ["nix-command" "flakes"];
+    settings.trusted-users = [ "root" "hayk" ];
   };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
