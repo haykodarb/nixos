@@ -220,6 +220,10 @@ in {
           nixd.enable = true;
           dartls.enable = true;
           clangd.enable = true;
+          html.enable = true;
+          cssls.enable = true;
+          svelte.enable = true;
+          ts_ls.enable = true;
           #ccls = {
           #  enable = true;
           #  initOptions.cache.directory = "/tmp/ccls-cache";
