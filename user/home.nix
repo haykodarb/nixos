@@ -223,6 +223,7 @@ in {
           html.enable = true;
           cssls.enable = true;
           svelte.enable = true;
+          eslint.enable = true;
           #ccls = {
           #  enable = true;
           #  initOptions.cache.directory = "/tmp/ccls-cache";
