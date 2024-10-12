@@ -26,7 +26,7 @@ in {
       nethogs xclip gnome.gnome-disk-utility udisks qbittorrent remmina woeusb-ng
       ntfs3g apmplanner2 alejandra obs-studio kdenlive logseq marktext vlc zoxide util-linux
       calc teams-for-linux mavproxy bitwise fzf gdb cmake stremio supabase-cli
-      platformio esptool freecad masterpdfeditor mtr prusa-slicer arduino
+      platformio esptool freecad masterpdfeditor mtr prusa-slicer arduino nodejs_22
       (python3.withPackages (python-pkgs: [
         python-pkgs.matplotlib
       ]))
