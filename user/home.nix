@@ -27,6 +27,7 @@ in {
       ntfs3g apmplanner2 alejandra obs-studio kdenlive logseq marktext vlc zoxide util-linux
       calc teams-for-linux mavproxy bitwise fzf gdb cmake stremio supabase-cli
       platformio esptool freecad masterpdfeditor mtr prusa-slicer arduino nodejs_22 ugs
+      chromium
       (python3.withPackages (python-pkgs: [
         python-pkgs.matplotlib
       ]))
