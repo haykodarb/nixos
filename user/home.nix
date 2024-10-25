@@ -62,6 +62,7 @@ in {
       
       shellAliases = {
         ll = "ls -l";
+        la = "ls -a";
         bw = "bitwise";
         rebuild = "~/nixos/rebuild.zsh";
         rewrite = "nvim ~/nixos";
