@@ -27,7 +27,7 @@ in {
       ntfs3g apmplanner2 alejandra obs-studio kdenlive logseq marktext vlc zoxide util-linux
       calc teams-for-linux mavproxy bitwise fzf gdb cmake stremio supabase-cli
       platformio esptool freecad masterpdfeditor mtr prusa-slicer arduino nodejs_22 ugs
-      chromium google-chrome
+      chromium 
       (python3.withPackages (python-pkgs: [
         python-pkgs.matplotlib
       ]))
@@ -63,6 +63,7 @@ in {
       shellAliases = {
         ll = "ls -l";
         la = "ls -a";
+        google-chrome = "chromium";
         bw = "bitwise";
         rebuild = "~/nixos/rebuild.zsh";
         rewrite = "nvim ~/nixos";
