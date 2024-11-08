@@ -228,10 +228,6 @@ in {
           cssls.enable = true;
           svelte.enable = true;
           eslint.enable = true;
-          #ccls = {
-          #  enable = true;
-          #  initOptions.cache.directory = "/tmp/ccls-cache";
-          #};
         };  
 
         keymaps = {
@@ -269,6 +265,12 @@ in {
           "<Tab>" = "cmp.mapping.confirm({ select = true })";
           "<Up>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
           "<Down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+        };
+
+        settings.window = {
+          completion.border = "rounded";
+          documentation.border = "rounded";
+
         };
       };
     };
