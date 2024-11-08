@@ -228,13 +228,11 @@ in {
           cssls.enable = true;
           svelte.enable = true;
           eslint.enable = true;
-        };  
+        };
 
         keymaps = {
           lspBuf = {
-            "<C-m>" = "code_action";
             "<C-n>" = "hover";
-            "<C-i>" = "format";
             "<leader>ld" = "definition";
             "<leader>lD" = "references";
             "<leader>lt" = "type_definition";
@@ -262,15 +260,14 @@ in {
         settings.mapping = {
           "<C-Space>" = "cmp.mapping.complete()";
           "<C-e>" = "cmp.mapping.close()";
-          "<Tab>" = "cmp.mapping.confirm({ select = true })";
-          "<Up>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
-          "<Down>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+          "<Enter>" = "cmp.mapping.confirm({ select = true })";
+          "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+          "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
         };
 
         settings.window = {
           completion.border = "rounded";
           documentation.border = "rounded";
-
         };
       };
     };
