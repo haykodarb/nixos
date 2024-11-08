@@ -258,6 +258,8 @@ in {
         keymaps = {
           lspBuf = {
             "<C-n>" = "hover";
+            "<C-m>" = "code_action";
+            "<C-i>" = "format";
             "<leader>ld" = "definition";
             "<leader>lD" = "references";
             "<leader>lt" = "type_definition";
@@ -286,7 +288,7 @@ in {
           "<C-Space>" = "cmp.mapping.complete()";
           "<C-e>" = "cmp.mapping.close()";
           "<Enter>" = "cmp.mapping.confirm({ select = true })";
-          "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+          "<C-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
           "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
         };
 
