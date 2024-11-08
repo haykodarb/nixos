@@ -115,6 +115,12 @@ in {
   programs.nixvim = {
     enable = true;
 
+    diagnostics = {
+      float = {
+        border = "rounded";
+      };
+    };
+
     autoCmd = [
       {
         event = "VimEnter";
