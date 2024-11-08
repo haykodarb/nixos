@@ -158,9 +158,18 @@ in {
       lualine.enable = true;
       nvim-colorizer.enable = true;
       luasnip.enable = true;
-      rainbow-delimiters.enable = true;
 
-      markdown-preview.enable = true;
+      rainbow-delimiters.enable = true;
+      rainbow-delimiters.highlight = [
+        "RainbowDelimiterYellow"
+        "RainbowDelimiterBlue"
+        "RainbowDelimiterOrange"
+        "RainbowDelimiterGreen"
+        "RainbowDelimiterViolet"
+        "RainbowDelimiterCyan"
+      ];
+
+      markdown-preview.enable= true;
 
       neo-tree = {
         enable = false;
