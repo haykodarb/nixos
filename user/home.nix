@@ -115,20 +115,21 @@ in {
   programs.nixvim = {
     enable = true;
     
-    extraConfigLua = "vim.lsp.handlers[\"textDocument/hover\"] = vim.lsp.with(
-  vim.lsp.handlers.hover, {
-    border = 'rounded'
-  }
-)
-
-vim.lsp.handlers[\"textDocument/signatureHelp\"] = vim.lsp.with(
-  vim.lsp.handlers.signature_help, {
-    border = 'rounded'
-  }
-  ) vim.diagnostic.config{
-    float={border='rounded'}
-  }
-";
+    extraConfigLua = "
+      vim.lsp.handlers[\"textDocument/hover\"] = vim.lsp.with(
+        vim.lsp.handlers.hover, {
+          border = 'single'
+        }
+      )
+      vim.lsp.handlers[\"textDocument/signatureHelp\"] = vim.lsp.with(
+        vim.lsp.handlers.signature_help, {
+          border = 'single'
+        }
+      ) 
+      vim.diagnostic.config{
+        float={border='single'}
+      }
+    ";
   
     autoCmd = [
       {
@@ -281,8 +282,8 @@ vim.lsp.handlers[\"textDocument/signatureHelp\"] = vim.lsp.with(
         };
 
         settings.window = {
-          completion.border = "rounded";
-          documentation.border = "rounded";
+          completion.border = "single";
+          documentation.border = "single";
         };
       };
     };
