@@ -1,5 +1,5 @@
 {pkgs, ...}: let
-  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/release-24.05.tar.gz";
+  home-manager = builtins.fetchTarball "https://github.com/nix-community/home-manager/archive/master.tar.gz";
 
   nixvim = import (builtins.fetchGit {
     url = "https://github.com/nix-community/nixvim";
@@ -21,10 +21,10 @@ in {
 
     home.stateVersion = "24.05";
     home.packages = with pkgs; [
-      btop ripgrep fd bear jdk17 gnumake openocd qgroundcontrol thunderbird slack discord
+      btop ripgrep fd bear jdk17 gnumake openocd qgroundcontrol thunderbird-bin slack discord
       electron lazygit catppuccin-gtk catppuccin-kde catppuccin-qt5ct catppuccin-cursors catppuccinifier-gui libreoffice-qt
       nethogs xclip gnome.gnome-disk-utility udisks qbittorrent remmina woeusb-ng
-      ntfs3g apmplanner2 alejandra obs-studio kdenlive logseq marktext vlc zoxide util-linux
+      ntfs3g obs-studio kdenlive logseq marktext vlc zoxide util-linux
       calc teams-for-linux mavproxy bitwise fzf gdb cmake stremio supabase-cli
       platformio esptool freecad masterpdfeditor mtr prusa-slicer arduino nodejs_22 ugs
       chromium openhantek6022

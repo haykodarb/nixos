@@ -33,6 +33,8 @@
   hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
   hardware.opengl.enable = true;
 
+  services.pipewire.enable = false;
+
   # rtkit is optional but recommended
   #services.pipewire = {
   #  enable = true;
