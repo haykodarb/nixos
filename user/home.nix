@@ -245,7 +245,7 @@ in {
         enable = true;
 
         servers = {
-          lua-ls.enable = true;
+          lua_ls.enable = true;
           nixd.enable = true;
           dartls.enable = true;
           clangd.enable = true;
