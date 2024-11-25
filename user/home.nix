@@ -3,7 +3,7 @@
 
   nixvim = import (builtins.fetchGit {
     url = "https://github.com/nix-community/nixvim";
-    ref = "nixos-24.05";
+    # ref = "nixos-24.05";
   });
 
   catppuccin = builtins.fetchTarball "https://github.com/catppuccin/nix/archive/main.tar.gz";

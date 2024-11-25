@@ -143,6 +143,7 @@
   nixpkgs = {
     config = {
       permittedInsecurePackages = [
+        "qbittorrent-4.6.4"
         "qtwebkit-5.212.0-alpha4"
         "electron-27.3.11"
       ];
