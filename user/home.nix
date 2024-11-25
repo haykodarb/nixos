@@ -159,6 +159,12 @@ in {
       nvim-colorizer.enable = true;
       luasnip.enable = true;
 
+      mini = {
+        enable = true;
+        modules.icons = { };
+        mockDevIcons = true;
+      };
+
       rainbow-delimiters.enable = true;
       rainbow-delimiters.highlight = [
         "RainbowDelimiterYellow"
