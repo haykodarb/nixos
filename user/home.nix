@@ -329,7 +329,7 @@ in {
       {
         # Delete GDB program window and shift GDB to the right and set width to 80.
         key = "<leader>dx";
-        action = "<C-\\><C-n>:Program<CR><C-w>:q!<CR>:Gdb<CR><C-W>J:Source<CR><C-W>H:Gdb<CR>70<C-W>|";
+        action = "<C-\\><C-n>:Program<CR><C-w>:q!<CR>:Gdb<CR><C-W>J:Source<CR><C-W>H:Gdb<CR>70<C-W>|<C-W>r:Var<CR>:below terminal<CR>:Gdb<CR>25<C-W>_";
       }
       {
         key = "<leader>dz";
