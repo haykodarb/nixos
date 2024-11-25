@@ -257,7 +257,6 @@ in {
           clangd.enable = true;
           html.enable = true;
           cssls.enable = true;
-          svelte.enable = true;
           eslint.enable = true;
         };
 
