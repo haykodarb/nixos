@@ -336,28 +336,36 @@ in {
         action = ":Termdebug<CR>";
       }
       {
-        key = "<leader>c";
+        key = "<leader>dm";
+        action = ":make -j8<CR>";
+      }
+      {
+        key = "<leader>dc";
         action = ":Continue<CR>";
       }
       {
-        key = "<leader>b";
+        key = "<leader>db";
         action = ":Break<CR>";
       }
       {
-        key = "<leader>v";
+        key = "<leader>dv";
         action = ":Clear<CR>";
       }
       {
-        key = "<leader>n";
+        key = "<leader>dn";
         action = ":Over<CR>";
       }
       {
-        key = "<leader>s";
+        key = "<leader>ds";
         action = ":Stop<CR>";
       }
       {
-        key = "<leader>a";
+        key = "<leader>da";
         action = ":Run<CR>";
+      }
+      {
+        key = "<leader>dl";
+        action = ":call TermDebugSendCommand('load')<CR>";
       }
 
     ];
