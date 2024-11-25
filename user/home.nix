@@ -151,6 +151,7 @@ in {
 
     globals.termdebug_config = {
       variables_window_height = 15;
+      variables_window = 1;
       wide = 1;
     };
 
