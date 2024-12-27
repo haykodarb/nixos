@@ -161,11 +161,11 @@ in {
       luasnip.enable = true;
       friendly-snippets.enable = true;
 
-      mini = {
-        enable = true;
-        modules.icons = { };
-        mockDevIcons = true;
-      };
+      #mini = {
+      #  enable = true;
+      #  modules.icons = { };
+      #  mockDevIcons = true;
+      # };
 
       rainbow-delimiters.enable = true;
       rainbow-delimiters.highlight = [
@@ -327,7 +327,6 @@ in {
             border = "single";
             draw = {
               gap = 2;
-              treesitter = true;
               columns = [
                 {
                   __unkeyed-1 = "label";
@@ -339,6 +338,7 @@ in {
                   __unkeyed-2 = "kind";
                   gap = 1;
                 }
+                { __unkeyed-1 = "source_name"; }
               ];
               components = {
                 label = {
