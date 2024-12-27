@@ -278,6 +278,17 @@ in {
 
       blink-cmp = {
         enable = true;
+        documentation = {
+          auto_show = true;
+        };
+        keymap = {
+          preset = "enter";
+        };
+        accept = {
+          auto_brackets = {
+            enabled = false;
+          };
+        };
       };
 
       #cmp = {
