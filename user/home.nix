@@ -159,6 +159,7 @@ in {
       lualine.enable = true;
       nvim-colorizer.enable = true;
       luasnip.enable = true;
+      friendly-snippets.enable = true;
 
       mini = {
         enable = true;
@@ -284,6 +285,7 @@ in {
               enabled = true;
             };
           };
+          completion.ghost_text.enabled = true;
           highlight = {
             use_nvim_cmp_as_default = true;
           };
@@ -299,7 +301,8 @@ in {
             default = [
               "lsp"
               "path"
-              "luasnip"
+              # "luasnip"
+              "snippets"
               "buffer"
               "treesitter"
             ];
@@ -329,37 +332,7 @@ in {
           keymap = {
             preset = "enter";
           };
-          menu = {
-            draw = {
-              gap = 2;
-              treesitter = true;
-              columns = [
-                {
-                  __unkeyed-1 = "label";
-                  __unkeyed-2 = "label_description";
-                  gap = 1;
-                }
-                {
-                  __unkeyed-1 = "kind_icon";
-                  __unkeyed-2 = "kind";
-                  gap = 1;
-                }
-              ];
-              components = {
-                label = {
-                  width = {
-                    fill = true;
-                  };
-                };
-                "kind_icon" = {
-                  width = {
-                    fill = true;
-                  };
-                };
-              };
-            };
-          };
-        };
+       };
       };
 
       #cmp = {
