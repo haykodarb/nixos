@@ -304,11 +304,60 @@ in {
               "treesitter"
             ];
           };
+          opts = {
+            snippets = {
+              expand.__raw = ''
+                function(snippet) require('luasnip').lsp_expand(snippet) end
+              '';
+              active.__raw = ''
+                function(filter)
+                if filter and filter.direction then
+                  return require('luasnip').jumpable(filter.direction)
+                end
+                return require('luasnip').in_snippet()
+                end
+              '';
+              jump.__raw = ''
+                function(direction) require('luasnip').jump(direction) end
+              '';
+            };
+          };
           documentation = {
             auto_show = true;
+            auto_show_delay_ms = 0;
           };
           keymap = {
             preset = "enter";
+          };
+          menu = {
+            draw = {
+              gap = 2;
+              treesitter = true;
+              columns = [
+                {
+                  __unkeyed-1 = "label";
+                  __unkeyed-2 = "label_description";
+                  gap = 1;
+                }
+                {
+                  __unkeyed-1 = "kind_icon";
+                  __unkeyed-2 = "kind";
+                  gap = 1;
+                }
+              ];
+              components = {
+                label = {
+                  width = {
+                    fill = true;
+                  };
+                };
+                "kind_icon" = {
+                  width = {
+                    fill = true;
+                  };
+                };
+              };
+            };
           };
         };
       };
