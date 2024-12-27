@@ -277,6 +277,7 @@ in {
 
       blink-cmp = {
         enable = true;
+	autoLoad = true;
         settings = {
           accept = {
             auto_brackets = {
@@ -292,6 +293,9 @@ in {
           signature = {
             enabled = true;
           };
+	  highlight = {
+	      use_nvim_cmp_as_default = true;
+	  };
           sources = {
             default = [
               "lsp"
@@ -363,71 +367,71 @@ in {
             preset = "enter";
           };
 
-         # appearance = {
-         #   kind_icons = {
-         #     Text = "Text";
-         #     Method = "Method";
-         #     Function = "Function";
-         #     Constructor = "Constructor";
-#
- #             Field = "Field";
-  #            Variable = "Variable";
-   #           Property = "Property";
+         appearance = {
+           kind_icons = {
+             Text = "Text";
+             Method = "Method";
+             Function = "Function";
+             Constructor = "Constructor";
 
-    #          Class = "Class";
-     #         Interface = "Interface";
-      #        Struct = "Struct";
-       #       Module = "Module";
+             Field = "Field";
+             Variable = "Variable";
+             Property = "Property";
 
-        #      Unit = "Unit";
-         #     Value = "Value";
-          #    Enum = "Enum";
-           #   EnumMember = "EnumMember";
+             Class = "Class";
+             Interface = "Interface";
+             Struct = "Struct";
+             Module = "Module";
 
-            #  Keyword = "Keyword";
-             # Constant = "Constant";
+             Unit = "Unit";
+             Value = "Value";
+             Enum = "Enum";
+             EnumMember = "EnumMember";
 
-             # Snippet = "Snippet";
-       #       Color = "Color";
-        #      File = "File";
-         #     Reference = "Reference";
-          #    Folder = "Folder";
-           #   Event = "Event";
-            #  Operator = "Operator";
-             # TypeParameter = "Type";
-            #};
-         # };
+             Keyword = "Keyword";
+             Constant = "Constant";
+
+             Snippet = "Snippet";
+             Color = "Color";
+             File = "File";
+             Reference = "Reference";
+             Folder = "Folder";
+             Event = "Event";
+             Operator = "Operator";
+             TypeParameter = "Type";
+            };
+         };
        };
       };
 
-      #cmp = {
-      #  enable = true;
-      #  autoEnableSources = true;
-      #  settings.sources = [
-      #    {name = "nvim_lsp";}
-      #    {name = "path";}
-      #    {name = "buffer";}
-      #  ];
-      #  settings.snippet = {
-      #    expand = ''
-      #      function(args)
-      #      require('luasnip').lsp_expand(args.body)
-      #      end
-      #    '';
-      #  };
-      #  settings.mapping = {
-      #    "<C-Space>" = "cmp.mapping.complete()";
-      #    "<C-e>" = "cmp.mapping.close()";
-      #    "<Enter>" = "cmp.mapping.confirm({ select = true })";
-      #    "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
-      #    "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-      #  };
-
-      #  settings.window = {
-      #   completion.border = "single";
-      #  documentation.border = "single";
-      # };
-      # };
+      cmp = {
+       enable = true;
+       # autoEnableSources = true;
+       # settings.sources = [
+       #   {name = "nvim_lsp";}
+       #   {name = "path";}
+       #   {name = "buffer";}
+       # ];
+       # settings.snippet = {
+       #   expand = ''
+       #     function(args)
+       #     require('luasnip').lsp_expand(args.body)
+       #     end
+       #   '';
+       # };
+       # settings.mapping = {
+       #   "<C-Space>" = "cmp.mapping.complete()";
+       #   "<C-e>" = "cmp.mapping.close()";
+       #   "<Enter>" = "cmp.mapping.confirm({ select = true })";
+       #   "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+       #   "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+       # };
+       #
+       settings.window = {
+	   completion.border = "single";
+	   documentation.border = "single";
+       };
+      };
     };
 
     keymaps = [
