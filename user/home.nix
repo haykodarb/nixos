@@ -367,37 +367,36 @@ in {
 
           appearance = {
             kind_icons = {
-              Copilot = "";
-              Text = "󰉿";
-              Method = "󰊕";
-              Function = "󰊕";
-              Constructor = "󰒓";
+              Text = "Text";
+              Method = "Method";
+              Function = "Function";
+              Constructor = "Constructor";
 
-              Field = "󰜢";
-              Variable = "󰆦";
-              Property = "󰖷";
+              Field = "Field";
+              Variable = "Variable";
+              Property = "Property";
 
-              Class = "󱡠";
-              Interface = "󱡠";
-              Struct = "󱡠";
-              Module = "󰅩";
+              Class = "Class";
+              Interface = "Interface";
+              Struct = "Struct";
+              Module = "Module";
 
-              Unit = "󰪚";
-              Value = "󰦨";
-              Enum = "󰦨";
-              EnumMember = "󰦨";
+              Unit = "Unit";
+              Value = "Value";
+              Enum = "Enum";
+              EnumMember = "EnumMember";
 
-              Keyword = "󰻾";
-              Constant = "󰏿";
+              Keyword = "Keyword";
+              Constant = "Constant";
 
-              Snippet = "󱄽";
-              Color = "󰏘";
-              File = "󰈔";
-              Reference = "󰬲";
-              Folder = "󰉋";
-              Event = "󱐋";
-              Operator = "󰪚";
-              TypeParameter = "󰬛";
+              Snippet = "Snippet";
+              Color = "Color";
+              File = "File";
+              Reference = "Reference";
+              Folder = "Folder";
+              Event = "Event";
+              Operator = "Operator";
+              TypeParameter = "Type";
             };
           };
        };
