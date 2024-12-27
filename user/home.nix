@@ -276,34 +276,38 @@ in {
         };
       };
 
-      cmp = {
+      blink-cmp = {
         enable = true;
-        autoEnableSources = true;
-        settings.sources = [
-          {name = "nvim_lsp";}
-          {name = "path";}
-          {name = "buffer";}
-        ];
-        settings.snippet = {
-          expand = ''
-            function(args)
-            require('luasnip').lsp_expand(args.body)
-            end
-          '';
-        };
-        settings.mapping = {
-          "<C-Space>" = "cmp.mapping.complete()";
-          "<C-e>" = "cmp.mapping.close()";
-          "<Enter>" = "cmp.mapping.confirm({ select = true })";
-          "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
-          "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-        };
-
-        settings.window = {
-          completion.border = "single";
-          documentation.border = "single";
-        };
       };
+
+      #cmp = {
+      #  enable = true;
+      #  autoEnableSources = true;
+      #  settings.sources = [
+      #    {name = "nvim_lsp";}
+      #    {name = "path";}
+      #    {name = "buffer";}
+      #  ];
+      #  settings.snippet = {
+      #    expand = ''
+      #      function(args)
+      #      require('luasnip').lsp_expand(args.body)
+      #      end
+      #    '';
+      #  };
+      #  settings.mapping = {
+      #    "<C-Space>" = "cmp.mapping.complete()";
+      #    "<C-e>" = "cmp.mapping.close()";
+      #    "<Enter>" = "cmp.mapping.confirm({ select = true })";
+      #    "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+      #    "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+      #  };
+
+      #  settings.window = {
+      #   completion.border = "single";
+      #  documentation.border = "single";
+      # };
+      # };
     };
 
     extraPlugins = with pkgs.vimPlugins; [
