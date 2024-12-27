@@ -286,9 +286,6 @@ in {
             };
           };
           completion.ghost_text.enabled = true;
-          highlight = {
-            use_nvim_cmp_as_default = true;
-          };
           trigger = {
             signature_help = {
               enabled = true;
@@ -326,10 +323,9 @@ in {
             };
           };
           menu = {
-            auto_show = false;
-
+            auto_show = true;
+            border = "single";
             draw = {
-              
               gap = 2;
               treesitter = true;
               columns = [
