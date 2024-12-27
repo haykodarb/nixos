@@ -325,12 +325,83 @@ in {
               '';
             };
           };
+          menu = {
+            auto_show = false;
+
+            draw = {
+              
+              gap = 2;
+              treesitter = true;
+              columns = [
+                {
+                  __unkeyed-1 = "label";
+                  __unkeyed-2 = "label_description";
+                  gap = 1;
+                }
+                {
+                  __unkeyed-1 = "kind_icon";
+                  __unkeyed-2 = "kind";
+                  gap = 1;
+                }
+              ];
+              components = {
+                label = {
+                  width = {
+                    fill = true;
+                  };
+                };
+                "kind_icon" = {
+                  width = {
+                    fill = true;
+                  };
+                };
+              };
+            };
+          };
+
           documentation = {
             auto_show = true;
             auto_show_delay_ms = 0;
           };
+
           keymap = {
             preset = "enter";
+          };
+
+          appearance = {
+            kind_icons = {
+              Copilot = "";
+              Text = "󰉿";
+              Method = "󰊕";
+              Function = "󰊕";
+              Constructor = "󰒓";
+
+              Field = "󰜢";
+              Variable = "󰆦";
+              Property = "󰖷";
+
+              Class = "󱡠";
+              Interface = "󱡠";
+              Struct = "󱡠";
+              Module = "󰅩";
+
+              Unit = "󰪚";
+              Value = "󰦨";
+              Enum = "󰦨";
+              EnumMember = "󰦨";
+
+              Keyword = "󰻾";
+              Constant = "󰏿";
+
+              Snippet = "󱄽";
+              Color = "󰏘";
+              File = "󰈔";
+              Reference = "󰬲";
+              Folder = "󰉋";
+              Event = "󱐋";
+              Operator = "󰪚";
+              TypeParameter = "󰬛";
+            };
           };
        };
       };
