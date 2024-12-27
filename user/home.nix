@@ -157,8 +157,6 @@ in {
 
     plugins = {
       lualine.enable = true;
-      nvim-colorizer.enable = true;
-      luasnip.enable = true;
       friendly-snippets.enable = true;
 
       #mini = {
@@ -365,40 +363,40 @@ in {
             preset = "enter";
           };
 
-          appearance = {
-            kind_icons = {
-              Text = "Text";
-              Method = "Method";
-              Function = "Function";
-              Constructor = "Constructor";
+         # appearance = {
+         #   kind_icons = {
+         #     Text = "Text";
+         #     Method = "Method";
+         #     Function = "Function";
+         #     Constructor = "Constructor";
+#
+ #             Field = "Field";
+  #            Variable = "Variable";
+   #           Property = "Property";
 
-              Field = "Field";
-              Variable = "Variable";
-              Property = "Property";
+    #          Class = "Class";
+     #         Interface = "Interface";
+      #        Struct = "Struct";
+       #       Module = "Module";
 
-              Class = "Class";
-              Interface = "Interface";
-              Struct = "Struct";
-              Module = "Module";
+        #      Unit = "Unit";
+         #     Value = "Value";
+          #    Enum = "Enum";
+           #   EnumMember = "EnumMember";
 
-              Unit = "Unit";
-              Value = "Value";
-              Enum = "Enum";
-              EnumMember = "EnumMember";
+            #  Keyword = "Keyword";
+             # Constant = "Constant";
 
-              Keyword = "Keyword";
-              Constant = "Constant";
-
-              Snippet = "Snippet";
-              Color = "Color";
-              File = "File";
-              Reference = "Reference";
-              Folder = "Folder";
-              Event = "Event";
-              Operator = "Operator";
-              TypeParameter = "Type";
-            };
-          };
+             # Snippet = "Snippet";
+       #       Color = "Color";
+        #      File = "File";
+         #     Reference = "Reference";
+          #    Folder = "Folder";
+           #   Event = "Event";
+            #  Operator = "Operator";
+             # TypeParameter = "Type";
+            #};
+         # };
        };
       };
 
@@ -432,14 +430,7 @@ in {
       # };
     };
 
-    extraPlugins = with pkgs.vimPlugins; [
-      gruvbox
-      vim-nix
-      lspkind-nvim
-    ];
-
     keymaps = [
-      # Those are somewhat doom-emacs keybinds...
       {
         # Escape out of terminal
         mode = "t";
