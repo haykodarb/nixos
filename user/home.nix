@@ -281,8 +281,28 @@ in {
         settings = {
           accept = {
             auto_brackets = {
-              enabled = false;
+              enabled = true;
             };
+          };
+          highlight = {
+            use_nvim_cmp_as_default = true;
+          };
+          trigger = {
+            signature_help = {
+              enabled = true;
+            };
+          };
+          signature = {
+            enabled = true;
+          };
+          sources = {
+            default = [
+              "lsp"
+              "path"
+              "luasnip"
+              "buffer"
+              "treesitter"
+            ];
           };
           documentation = {
             auto_show = true;
