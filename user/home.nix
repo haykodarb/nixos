@@ -35,6 +35,8 @@ in {
 
     catppuccin.flavor = "mocha";
     catppuccin.enable = true;
+    catppuccin.alacritty.enable = true;
+    catppuccin.btop.enable = true;
 
     home.sessionPath = [];
 
@@ -107,10 +109,6 @@ in {
         #setw pane-base-index 1
     };
   };
-
-  catppuccin.flavor = "mocha";
-  catppuccin.enable = true;
-  catppuccin.alacritty.enable = true;
 
   programs.nixvim = {
     enable = true;
