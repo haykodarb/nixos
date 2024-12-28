@@ -277,158 +277,159 @@ in {
         };
       };
 
-      blink-cmp = {
-        enable = true;
-	autoLoad = true;
-        settings = {
-          accept = {
-            auto_brackets = {
-              enabled = true;
-            };
-          };
-          completion.ghost_text.enabled = true;
-          trigger = {
-            signature_help = {
-              enabled = true;
-            };
-          };
-          signature = {
-            enabled = true;
-          };
-	  highlight = {
-	      use_nvim_cmp_as_default = true;
-	  };
-          sources = {
-            default = [
-              "lsp"
-              "path"
-              # "luasnip"
-              "snippets"
-              "buffer"
-              "treesitter"
-            ];
-          };
-          opts = {
-            snippets = {
-              expand.__raw = ''
-                function(snippet) require('luasnip').lsp_expand(snippet) end
-              '';
-              active.__raw = ''
-                function(filter)
-                if filter and filter.direction then
-                  return require('luasnip').jumpable(filter.direction)
-                end
-                return require('luasnip').in_snippet()
-                end
-              '';
-              jump.__raw = ''
-                function(direction) require('luasnip').jump(direction) end
-              '';
-            };
-          };
-          menu = {
-            auto_show = true;
-            border = "single";
-            draw = {
-              gap = 2;
-              columns = [
-                {
-                  __unkeyed-1 = "label";
-                  __unkeyed-2 = "label_description";
-                  gap = 1;
-                }
-                {
-                  __unkeyed-1 = "kind_icon";
-                  __unkeyed-2 = "kind";
-                  gap = 1;
-                }
-                { __unkeyed-1 = "source_name"; }
-              ];
-              components = {
-                label = {
-                  width = {
-                    fill = true;
-                  };
-                };
-                "kind_icon" = {
-                  width = {
-                    fill = true;
-                  };
-                };
-              };
-            };
-          };
-
-          documentation = {
-            auto_show = true;
-            auto_show_delay_ms = 100;
-            window.border = "single";
-          };
-
-          keymap = {
-            preset = "enter";
-          };
-
-         appearance = {
-           kind_icons = {
-             Text = "Text";
-             Method = "Method";
-             Function = "Function";
-             Constructor = "Constructor";
-
-             Field = "Field";
-             Variable = "Variable";
-             Property = "Property";
-
-             Class = "Class";
-             Interface = "Interface";
-             Struct = "Struct";
-             Module = "Module";
-
-             Unit = "Unit";
-             Value = "Value";
-             Enum = "Enum";
-             EnumMember = "EnumMember";
-
-             Keyword = "Keyword";
-             Constant = "Constant";
-
-             Snippet = "Snippet";
-             Color = "Color";
-             File = "File";
-             Reference = "Reference";
-             Folder = "Folder";
-             Event = "Event";
-             Operator = "Operator";
-             TypeParameter = "Type";
-            };
-         };
-       };
-      };
+	#      blink-cmp = {
+	#        enable = true;
+	# autoLoad = true;
+	#        settings = {
+	#          accept = {
+	#            auto_brackets = {
+	#              enabled = true;
+	#            };
+	#          };
+	#          completion.ghost_text.enabled = true;
+	#          trigger = {
+	#            signature_help = {
+	#              enabled = true;
+	#            };
+	#          };
+	#          signature = {
+	#            enabled = true;
+	#          };
+	#   highlight = {
+	#       use_nvim_cmp_as_default = true;
+	#   };
+	#          sources = {
+	#            default = [
+	#              "lsp"
+	#              "path"
+	#              # "luasnip"
+	#              "snippets"
+	#              "buffer"
+	#              "treesitter"
+	#            ];
+	#          };
+	#          opts = {
+	#            snippets = {
+	#              expand.__raw = ''
+	#                function(snippet) require('luasnip').lsp_expand(snippet) end
+	#              '';
+	#              active.__raw = ''
+	#                function(filter)
+	#                if filter and filter.direction then
+	#                  return require('luasnip').jumpable(filter.direction)
+	#                end
+	#                return require('luasnip').in_snippet()
+	#                end
+	#              '';
+	#              jump.__raw = ''
+	#                function(direction) require('luasnip').jump(direction) end
+	#              '';
+	#            };
+	#          };
+	#          menu = {
+	#            auto_show = true;
+	#            border = "single";
+	#            draw = {
+	#              gap = 2;
+	#              columns = [
+	#                {
+	#                  __unkeyed-1 = "label";
+	#                  __unkeyed-2 = "label_description";
+	#                  gap = 1;
+	#                }
+	#                {
+	#                  __unkeyed-1 = "kind_icon";
+	#                  __unkeyed-2 = "kind";
+	#                  gap = 1;
+	#                }
+	#                { __unkeyed-1 = "source_name"; }
+	#              ];
+	#              components = {
+	#                label = {
+	#                  width = {
+	#                    fill = true;
+	#                  };
+	#                };
+	#                "kind_icon" = {
+	#                  width = {
+	#                    fill = true;
+	#                  };
+	#                };
+	#              };
+	#            };
+	#          };
+	#
+	#          documentation = {
+	#            auto_show = true;
+	#            auto_show_delay_ms = 100;
+	#            window.border = "single";
+	#          };
+	#
+	#          keymap = {
+	#            preset = "enter";
+	#          };
+	#
+	#         appearance = {
+	#           kind_icons = {
+	#             Text = "Text";
+	#             Method = "Method";
+	#             Function = "Function";
+	#             Constructor = "Constructor";
+	#
+	#             Field = "Field";
+	#             Variable = "Variable";
+	#             Property = "Property";
+	#
+	#             Class = "Class";
+	#             Interface = "Interface";
+	#             Struct = "Struct";
+	#             Module = "Module";
+	#
+	#             Unit = "Unit";
+	#             Value = "Value";
+	#             Enum = "Enum";
+	#             EnumMember = "EnumMember";
+	#
+	#             Keyword = "Keyword";
+	#             Constant = "Constant";
+	#
+	#             Snippet = "Snippet";
+	#             Color = "Color";
+	#             File = "File";
+	#             Reference = "Reference";
+	#             Folder = "Folder";
+	#             Event = "Event";
+	#             Operator = "Operator";
+	#             TypeParameter = "Type";
+	#            };
+	#         };
+	#       };
+	#      };
+	#
 
       cmp = {
        enable = true;
-       # autoEnableSources = true;
-       # settings.sources = [
-       #   {name = "nvim_lsp";}
-       #   {name = "path";}
-       #   {name = "buffer";}
-       # ];
-       # settings.snippet = {
-       #   expand = ''
-       #     function(args)
-       #     require('luasnip').lsp_expand(args.body)
-       #     end
-       #   '';
-       # };
-       # settings.mapping = {
-       #   "<C-Space>" = "cmp.mapping.complete()";
-       #   "<C-e>" = "cmp.mapping.close()";
-       #   "<Enter>" = "cmp.mapping.confirm({ select = true })";
-       #   "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
-       #   "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
-       # };
-       #
+       autoEnableSources = true;
+       settings.sources = [
+         {name = "nvim_lsp";}
+         {name = "path";}
+         {name = "buffer";}
+       ];
+       settings.snippet = {
+         expand = ''
+           function(args)
+           require('luasnip').lsp_expand(args.body)
+           end
+         '';
+       };
+       settings.mapping = {
+         "<C-Space>" = "cmp.mapping.complete()";
+         "<C-e>" = "cmp.mapping.close()";
+         "<Enter>" = "cmp.mapping.confirm({ select = true })";
+         "<S-Tab>" = "cmp.mapping(cmp.mapping.select_prev_item(), {'i', 's'})";
+         "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
+       };
+
        settings.window = {
 	   completion.border = "single";
 	   documentation.border = "single";
