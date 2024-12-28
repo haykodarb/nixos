@@ -247,6 +247,8 @@ in {
         enable = true;
       };
 
+      bufferline.enable = true;
+
       lsp = {
         enable = true;
 
@@ -259,6 +261,7 @@ in {
           html.enable = true;
           cssls.enable = true;
           eslint.enable = true;
+	  rust_analyzer.enable = true;
         };
 
         keymaps = {
