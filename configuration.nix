@@ -36,7 +36,7 @@
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.support32Bit = true;
   hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   services.pipewire.enable = false;
 
@@ -124,8 +124,8 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
-  services.displayManager.sddm.catppuccin.enable = false;
-  boot.loader.grub.catppuccin.enable = true;
+  catppuccin.sddm.enable = false;
+  catppuccin.grub.enable = true;
 
   virtualisation.docker.rootless = {
     enable = true;

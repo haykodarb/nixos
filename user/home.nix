@@ -86,7 +86,6 @@ in {
 
     programs.alacritty = {
       enable = true;
-      catppuccin.enable = true;
       settings = {
         window.opacity = 0.975;
         env = {
@@ -111,6 +110,7 @@ in {
 
   catppuccin.flavor = "mocha";
   catppuccin.enable = true;
+  catppuccin.alacritty.enable = true;
 
   programs.nixvim = {
     enable = true;
@@ -243,9 +243,9 @@ in {
         };
       };
 
-      treesitter = {
-        enable = true;
-      };
+      treesitter.enable = true;
+
+      web-devicons.enable = true;
 
       lsp = {
         enable = true;
@@ -261,6 +261,8 @@ in {
           eslint.enable = true;
 	  rust_analyzer.enable = true;
 	  rust_analyzer.installCargo = true;
+	  rust_analyzer.installRustc = true;
+
         };
 
         keymaps = {
