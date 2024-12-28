@@ -65,6 +65,7 @@ in {
       shellAliases = {
         ll = "ls -l";
         la = "ls -a";
+	dev = "nix develop -c \"zsh\"";
         google-chrome = "chromium";
         bw = "bitwise";
         rebuild = "~/nixos/rebuild.zsh";
