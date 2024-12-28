@@ -247,8 +247,6 @@ in {
         enable = true;
       };
 
-      bufferline.enable = true;
-
       lsp = {
         enable = true;
 
