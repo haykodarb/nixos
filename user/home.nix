@@ -101,7 +101,7 @@ in {
       enable = true;
       shortcut = "g";
       extraConfig = ''
-        set-option -g default-shell $SHELL
+        set-option -g default-shell zsh
         set  default-terminal "xterm-256color"
         set  terminal-overrides ",*:RGB"
         set  escape-time 20
