@@ -27,7 +27,7 @@ in {
       ntfs3g obs-studio kdenlive logseq marktext vlc zoxide util-linux
       calc teams-for-linux mavproxy bitwise fzf gdb cmake stremio supabase-cli
       platformio esptool freecad masterpdfeditor mtr prusa-slicer arduino nodejs_22 ugs
-      chromium openhantek6022
+      chromium openhantek6022 glibc
       (python3.withPackages (python-pkgs: [
         python-pkgs.matplotlib
       ]))
