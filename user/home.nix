@@ -156,6 +156,7 @@ in {
 
     plugins = {
       lualine.enable = true;
+      luasnip.enable = true;
       friendly-snippets.enable = true;
 
       #mini = {
