@@ -141,6 +141,7 @@
     packages = with pkgs; [
       kdePackages.kate
     ];
+    shell = pkgs.zsh;
   };
 
   # Enable automatic login for the user.
