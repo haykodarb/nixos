@@ -454,6 +454,14 @@ in {
 	options.silent = true;
       }
       {
+	key = "<leader>tb";
+	action = ":below terminal";
+      }
+      {
+	key = "<leader>tr";
+	action = ":vertical terminal";
+      }
+      {
         # Delete GDB program window and shift GDB to the right and set width to 80.
         key = "<leader>dx";
         action = "<C-\\><C-n>:Program<CR><C-w>:q!<CR>:Gdb<CR><C-W>J:Source<CR><C-W>H:Gdb<CR>70<C-W>|<C-W>r:Var<CR>:below terminal<CR>10<C-W>_:Gdb<CR>30<C-W>_";
