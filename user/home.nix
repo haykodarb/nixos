@@ -455,11 +455,11 @@ in {
       }
       {
 	key = "<leader>tb";
-	action = ":below terminal";
+	action = ":below terminal<CR>12<C-W>_";
       }
       {
 	key = "<leader>tr";
-	action = ":vertical terminal";
+	action = ":vertical terminal<CR>";
       }
       {
         # Delete GDB program window and shift GDB to the right and set width to 80.
