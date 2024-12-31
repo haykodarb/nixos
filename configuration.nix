@@ -181,8 +181,6 @@
   # };
 
   # List services that you want to enable:
-  programs.zsh.enable = true;
-  users.users.hayk.shell = pkgs.zsh;
 
   # Enable the OpenSSH daemon.
   services.openssh = {
