@@ -188,7 +188,6 @@
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
-    startWhenNeeded = true;
   };
 
   # Open ports in the firewall.
