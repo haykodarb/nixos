@@ -7,7 +7,7 @@ $line_break\
 $character"""
 
 [directory]
-style = "bold orange"
+style = "bold red"
 format = '\[[$path]($style)\][$read_only]($read_only_style) '
 
 [character]
@@ -16,11 +16,11 @@ error_symbol = " [❯](red)"
 vimcmd_symbol = " [❮](purple)"
 
 [git_branch]
-format = '\[[$branch]($style)\]'
-style = "bright-black"
+format = '\[[$branch]($style)\] '
+style = "cyan"
 
 [nix_shell]
 impure_msg = ''
 pure_msg = ''
 unknown_msg = ''
-format = '\[[$name](yellow)\]'
+format = '\[[$name](yellow)\] '
