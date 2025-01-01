@@ -8,7 +8,7 @@ $nix_shell\
 
 [directory]
 style = "bold blue"
-format = "\[[$path]($style)[$read_only]($read_only_style)\]"
+format = '\[[$path]($style)[$read_only]($read_only_style)\]'
 
 [character]
 success_symbol = " [❯](green)"
@@ -16,7 +16,7 @@ error_symbol = " [❯](red)"
 vimcmd_symbol = " [❮](purple)"
 
 [git_branch]
-format = "\[[$branch]($style)\]"
+format = '\[[$branch]($style)\]'
 style = "bright-black"
 
 [nix_shell]
