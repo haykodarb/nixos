@@ -78,6 +78,10 @@ in {
 	settings = pkgs.lib.importTOML ./starship.toml;
     };
 
+    programs.fzf = {
+	enable = true;
+    };
+
 	#    programs.zsh = {
 	#      enable = true;
 	#      enableCompletion = true;
