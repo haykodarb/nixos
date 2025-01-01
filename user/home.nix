@@ -75,6 +75,7 @@ in {
     programs.starship = {
 	enable = true;
 	enableBashIntegration = true;
+	settings =  { 
 	    add_newline = false;
 	    format =  "$line_break $package $line_break $character";
 	    scan_timeout = 10;
@@ -82,6 +83,7 @@ in {
 		success_symbol = "➜";
 		error_symbol = "➜";
 	    };
+	};
     };
 
 	#    programs.zsh = {
