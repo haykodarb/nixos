@@ -3,12 +3,12 @@ $hostname\
 $directory\
 $git_branch\
 $nix_shell\
- $line_break\
- $character"""
+$line_break\
+$character"""
 
 [directory]
-style = "bold blue"
-format = '\[[$path]($style)[$read_only]($read_only_style)\]'
+style = "bold orange"
+format = '\[[$path]\]($style)[$read_only]($read_only_style) '
 
 [character]
 success_symbol = " [❯](green)"
@@ -16,11 +16,11 @@ error_symbol = " [❯](red)"
 vimcmd_symbol = " [❮](purple)"
 
 [git_branch]
-format = '\[[$branch]($style)\]'
+format = '\[[$branch]\]($style)'
 style = "bright-black"
 
 [nix_shell]
 impure_msg = ''
 pure_msg = ''
 unknown_msg = ''
-format = ' \[[$name](yellow)\]'
+format = '\[[$name]\](yellow)'
