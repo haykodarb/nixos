@@ -23,4 +23,4 @@ style = "bright-black"
 impure_msg = ''
 pure_msg = ''
 unknown_msg = ''
-format = '[$name](yellow) '
+format = ' [$name](yellow) '
