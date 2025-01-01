@@ -1,21 +1,26 @@
 format = """ $username\
- $hostname\
- $directory\
- $git_branch\
- $nix_shell\
+$hostname\
+$directory\
+$git_branch\
+$nix_shell\
  $line_break\
  $character"""
 
 [directory]
-style = "blue"
+style = "bold blue"
 
 [character]
-success_symbol = "[❯](purple)"
-error_symbol = "[❯](red)"
-vimcmd_symbol = "[❮](green)"
+success_symbol = " [❯](purple)"
+error_symbol = " [❯](red)"
+vimcmd_symbol = " [❮](green)"
 
 [git_branch]
 format = "[$branch]($style)"
 style = "bright-black"
 
 
+[nix_shell]
+impure_msg = ''
+pure_msg = ''
+unknown_msg = ''
+format = '[$name](yellow) '
