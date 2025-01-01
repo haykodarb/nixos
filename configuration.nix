@@ -188,7 +188,6 @@
   # Enable the OpenSSH daemon.
   services.openssh = {
     enable = true;
-    extraConfig = "IPQoS=none";
   };
 
   # Open ports in the firewall.

@@ -65,7 +65,7 @@ in {
       shellAliases = {
         ll = "ls -l";
         la = "ls -a";
-	dev = "nix develop -c \"zsh\" && SHELL=$(which zsh)";
+	dev = "nix develop -c \"zsh\" -c \"SHELL=$(which zsh)\"";
         google-chrome = "chromium";
         bw = "bitwise";
         rebuild = "~/nixos/rebuild.zsh";
@@ -73,7 +73,7 @@ in {
         work = "cd ~/code/work";
         personal = "cd ~/code/personal";
         rocket = "cd ~/code/work/rocket/rocket_caddis_original_fw/SW";
-        communal = "cd ~/code/personal/communal/communal_app && dev";
+        communal = "cd ~/code/personal/communal/communal_app";
       };
 
       syntaxHighlighting.enable = true;
