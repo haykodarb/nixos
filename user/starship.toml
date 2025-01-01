@@ -6,6 +6,7 @@ $git_branch\
 $git_state\
 $git_status\
 $cmd_duration\
+$nix_shell\
 $line_break\
  $character"""
 
