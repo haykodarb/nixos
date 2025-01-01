@@ -75,9 +75,7 @@ in {
     programs.starship = {
 	enable = true;
 	enableBashIntegration = true;
-	settings =  { 
-	    scan_timeout = 10;
-	};
+	settings = pkgs.lib.importTOML ../starship.toml;
     };
 
 	#    programs.zsh = {
