@@ -75,7 +75,7 @@ in {
     programs.starship = {
 	enable = true;
 	enableBashIntegration = true;
-	settings = pkgs.lib.importTOML ../starship.toml;
+	settings = pkgs.lib.importTOML ./starship.toml;
     };
 
 	#    programs.zsh = {
