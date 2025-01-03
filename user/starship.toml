@@ -6,6 +6,9 @@ $nix_shell\
 $line_break\
 $character"""
 
+# Disable the blank line at the start of the prompt
+add_newline = false
+
 [directory]
 style = "bold red"
 format = '\[[$path]($style)\][$read_only]($read_only_style) '
