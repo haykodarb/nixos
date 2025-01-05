@@ -94,6 +94,11 @@ in {
 	font = {
 	    normal = {
 		family = "Hack Nerd Font Mono";
+		style = "Regular";
+	    };
+	    bold = {
+		family = "Hack Nerd Font Mono";
+		style = "Bold";
 	    };
 	};
       };
