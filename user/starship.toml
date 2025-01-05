@@ -10,7 +10,7 @@ $character"""
 add_newline = false
 
 [directory]
-style = "bold red"
+style = "bold cyan"
 format = '\[[$path]($style)\][$read_only]($read_only_style) '
 
 [character]
@@ -20,10 +20,10 @@ vimcmd_symbol = " [❮](purple)"
 
 [git_branch]
 format = '\[[$branch]($style)\] '
-style = "cyan"
+style = "yellow"
 
 [nix_shell]
 impure_msg = ''
 pure_msg = ''
 unknown_msg = ''
-format = '\[[$name](yellow)\] '
+format = '\[[$name](red)\] '
