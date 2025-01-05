@@ -27,7 +27,7 @@ in {
       ntfs3g obs-studio kdenlive logseq marktext vlc zoxide util-linux
       calc teams-for-linux mavproxy bitwise fzf gdb cmake stremio supabase-cli
       platformio esptool freecad masterpdfeditor mtr prusa-slicer arduino nodejs_22 ugs
-      chromium openhantek6022 glibc hack-font nerd-fonts.hack fira-code-nerdfont fira-code fira-code-symbols
+      chromium openhantek6022 glibc nerd-fonts.hack 
       (python3.withPackages (python-pkgs: [
         python-pkgs.matplotlib
       ]))
@@ -95,6 +95,14 @@ in {
 	    normal = {
 		family = "Hack Nerd Font Mono";
 		style = "Regular";
+	    };
+	    italic = {
+		family = "Hack Nerd Font Mono";
+		style = "Italic";
+	    };
+	    bold_italic = {
+		family = "Hack Nerd Font Mono";
+		style = "Bold Italic";
 	    };
 	    bold = {
 		family = "Hack Nerd Font Mono";
