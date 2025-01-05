@@ -82,55 +82,6 @@ in {
 	enable = true;
     };
 
-	#    programs.zsh = {
-	#      enable = true;
-	#      enableCompletion = true;
-	#      initExtra = "
-	#          source ~/.nix-profile/share/git/contrib/completion/git-prompt.sh \n
-	#          setopt PROMPT_SUBST \n
-	#          PS1='%F{red} [ %f%F{cyan}%2~%f%F{red} ] [%f%F{yellow}$(__git_ps1 \" %s \")%f%F{red}] \n > %f'
-	#          eval \"$(direnv hook zsh)\"
-	#        ";
-	#
-	#      shellAliases = {
-	#        ll = "ls -l";
-	#        la = "ls -a";
-	# 	 dev = "nix develop -c \"zsh\" -c \"SHELL=$(which zsh)\"";
-	#        google-chrome = "chromium";
-	#        bw = "bitwise";
-	#        rebuild = "~/nixos/rebuild.zsh";
-	#        rewrite = "nvim ~/nixos";
-	#        work = "cd ~/code/work";
-	#        personal = "cd ~/code/personal";
-	#        rocket = "cd ~/code/work/rocket/rocket_caddis_original_fw/SW";
-	#        communal = "cd ~/code/personal/communal/communal_app";
-	#      };
-	#
-	#      syntaxHighlighting.enable = true;
-	#      autosuggestion.enable = true;
-	#
-	#      syntaxHighlighting.highlighters = ["brackets" "main" "cursor"];
-	#
-	#      history = {
-	#        ignoreDups = true;
-	#        ignoreAllDups = true;
-	#      };
-	#
-	#      plugins = [
-	#      {
-	#   name = "zsh-nix-shell";
-	#   file = "nix-shell.plugin.zsh";
-	#   src = pkgs.fetchFromGitHub {
-	#       owner = "chisui";
-	#       repo = "zsh-nix-shell";
-	#       rev = "v0.8.0";
-	#       sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
-	#   };
-	#      }
-	#      ];
-	#
-	#    };
-	#
     programs.alacritty = {
       enable = true;
       settings = {
@@ -138,6 +89,12 @@ in {
         env = {
           TERM = "xterm-256color";
         };
+	font = {
+	    normal = {
+		family = "JetBrainsMono Nerd Font";
+		style = "Regular";
+	    };
+	};
       };
     };
 
