@@ -275,6 +275,8 @@ in {
           cssls.enable = true;
           eslint.enable = true;
 	  rust_analyzer.enable = true;
+	  rust_analyzer.installCargo = false;
+	  rust_analyzer.installRustc = false;
         };
 
         keymaps = {

@@ -33,9 +33,9 @@
   documentation.man.generateCaches = true;
 
   hardware.enableAllFirmware = true;
-  hardware.pulseaudio.enable = true;
-  hardware.pulseaudio.support32Bit = true;
-  hardware.pulseaudio.extraConfig = "load-module module-combine-sink";
+  services.pulseaudio.enable = true;
+  services.pulseaudio.support32Bit = true;
+  services.pulseaudio.extraConfig = "load-module module-combine-sink";
   hardware.graphics.enable = true;
 
   services.pipewire.enable = false;
