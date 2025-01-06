@@ -10,7 +10,7 @@ $character"""
 add_newline = false
 
 [directory]
-style = "bold cyan"
+style = "bold green"
 format = '\[[$path]($style)\][$read_only]($read_only_style) '
 
 [character]
