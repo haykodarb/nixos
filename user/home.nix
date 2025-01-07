@@ -119,7 +119,7 @@ in {
         set  default-terminal "xterm-256color"
         set  terminal-overrides ",*:RGB"
         set  escape-time 20
-      '';
+	'';
         #set  base-index 1
         #setw pane-base-index 1
     };
@@ -147,13 +147,13 @@ in {
 
 	vim.api.nvim_create_autocmd(\"WinEnter\", {
 	    callback = function()
-		vim.wo.winhighlight = \"Normal:Normal,FloatBorder:FloatBorder\"
+		vim.wo.winhighlight = \"Normal:Normal,NormalNC:NormalNC\"
 	    end,
 	})
 
 	vim.api.nvim_create_autocmd(\"WinLeave\", {
 	    callback = function()
-		vim.wo.winhighlight = \"Normal:Normal,FloatBorder:FloatBorder\"
+		vim.wo.winhighlight = \"Normal:NormalSB,NormalNC:NormalSB\"
 	    end,
 	})
     ";
