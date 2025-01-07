@@ -153,7 +153,7 @@ in {
 
 	vim.api.nvim_create_autocmd(\"WinLeave\", {
 	    callback = function()
-		vim.wo.winhighlight = \"Normal:NormalSB,NormalNC:NormalSB\"
+		vim.wo.winhighlight = \"Normal:PMenu,NormalNC:PMenu\"
 	    end,
 	})
     ";
