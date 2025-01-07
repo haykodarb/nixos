@@ -129,19 +129,33 @@ in {
     enable = true;
     
     extraConfigLua = "
-      vim.lsp.handlers[\"textDocument/hover\"] = vim.lsp.with(
-        vim.lsp.handlers.hover, {
-          border = 'single'
-        }
-      )
-      vim.lsp.handlers[\"textDocument/signatureHelp\"] = vim.lsp.with(
-        vim.lsp.handlers.signature_help, {
-          border = 'single'
-        }
-      ) 
-      vim.diagnostic.config{
-        float={border='single'}
-      }
+	vim.lsp.handlers[\"textDocument/hover\"] = vim.lsp.with(
+	    vim.lsp.handlers.hover, {
+		border = 'single'
+	    }
+	)
+
+	vim.lsp.handlers[\"textDocument/signatureHelp\"] = vim.lsp.with(
+	    vim.lsp.handlers.signature_help, {
+		border = 'single'
+	    }
+	) 
+
+	vim.diagnostic.config{
+	    float={border='single'}
+	}
+
+	vim.api.nvim_create_autocmd(\"WinEnter\", {
+	    callback = function()
+		vim.wo.winhighlight = \"Normal:Normal,FloatBorder:FloatBorder\"
+	    end,
+	})
+
+	vim.api.nvim_create_autocmd(\"WinLeave\", {
+	    callback = function()
+		vim.wo.winhighlight = \"Normal:Normal,FloatBorder:FloatBorder\"
+	    end,
+	})
     ";
   
     autoCmd = [
@@ -524,7 +538,7 @@ in {
       dark_variant = "moon";
     };
     colorschemes.catppuccin.enable = true;
-    colorschemes.catppuccin.settings.transparent_background = true;
+    colorschemes.catppuccin.settings.transparent_background = false;
 
     colorscheme = "catppuccin";
   };
