@@ -273,7 +273,7 @@ in {
       };
 
       treesitter.enable = true;
-
+      flutter-tools.enable = true;
       web-devicons.enable = true;
 
       lsp = {
@@ -282,7 +282,6 @@ in {
         servers = {
           lua_ls.enable = true;
           nixd.enable = true;
-          dartls.enable = true;
           dartls.settings.lineLength = 120;
           clangd.enable = true;
           html.enable = true;
