@@ -39,7 +39,7 @@
   hardware.graphics.enable = true;
 
   services.pipewire.enable = false;
-  xserver.wacom.enable = true;
+  services.xserver.wacom.enable = true;
 
   # rtkit is optional but recommended
   #services.pipewire = {
