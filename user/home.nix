@@ -144,6 +144,8 @@ in {
 	vim.diagnostic.config{
 	    float={border='single'}
 	}
+    
+	vim.api.nvim_set_hl(0, 'Unselected', { fg = \"#cdd6fa\", bg = \"#24273a\" })
 
 	vim.api.nvim_create_autocmd(\"WinEnter\", {
 	    callback = function()
@@ -153,7 +155,7 @@ in {
 
 	vim.api.nvim_create_autocmd(\"WinLeave\", {
 	    callback = function()
-		vim.wo.winhighlight = \"Normal:PMenu,NormalNC:PMenu\"
+		vim.wo.winhighlight = \"Normal:Unselected,NormalNC:Unselected\"
 	    end,
 	})
     ";
