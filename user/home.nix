@@ -412,6 +412,7 @@ in {
     # colorschemes.rose-pine.settings = {
     #   dark_variant = "moon";
     # };
+    colorschemes.gruvbox.enable = true;
     colorschemes.catppuccin.enable = true;
     colorschemes.catppuccin.settings.transparent_background = false;
 
