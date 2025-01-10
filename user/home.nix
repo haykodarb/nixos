@@ -169,8 +169,6 @@ in {
 
     extraLuaPackages = ps: [ps.jsregexp];
 
-    extraPlugins = with pkgs.vimPlugins; [ gruvbox-material-nvim ];
-
     opts = {
       number = true;
       clipboard = "unnamedplus";
@@ -410,11 +408,10 @@ in {
 
       ];
     
-    # colorschemes.rose-pine.enable = true;
-    # colorschemes.rose-pine.settings = {
-    #   dark_variant = "moon";
-    # };
-    colorschemes.gruvbox.enable = true;
+    colorschemes.rose-pine.enable = true;
+    colorschemes.rose-pine.settings = {
+      dark_variant = "moon";
+    };
 
     colorschemes.everforest = {
 	enable = true;
