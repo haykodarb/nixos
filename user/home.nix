@@ -413,7 +413,14 @@ in {
     #   dark_variant = "moon";
     # };
     colorschemes.gruvbox.enable = true;
-    colorschemes.everforest.enable = true;
+
+    colorschemes.everforest = {
+	enable = true;
+	settings = {
+	    background = "hard";
+	};
+    };
+
     colorschemes.catppuccin.enable = true;
     colorschemes.catppuccin.settings.transparent_background = false;
 
