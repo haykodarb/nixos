@@ -169,6 +169,8 @@ in {
 
     extraLuaPackages = ps: [ps.jsregexp];
 
+    extraPlugins = with pkgs.vimPlugins; [ gruvbox-material-nvim ];
+
     opts = {
       number = true;
       clipboard = "unnamedplus";
