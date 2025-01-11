@@ -21,12 +21,12 @@ in {
 
     home.stateVersion = "24.05";
     home.packages = with pkgs; [
-      btop ripgrep fd bear jdk17 gnumake openocd qgroundcontrol thunderbird-bin slack discord
+      btop ripgrep fd jdk17 qgroundcontrol thunderbird-bin slack discord
       electron lazygit catppuccin-gtk catppuccin-kde catppuccin-qt5ct catppuccin-cursors catppuccinifier-gui libreoffice-qt
-      nethogs xclip gnome-disk-utility udisks qbittorrent remmina woeusb-ng
-      ntfs3g obs-studio kdenlive logseq marktext vlc zoxide util-linux
-      calc teams-for-linux mavproxy bitwise fzf gdb cmake stremio supabase-cli
-      platformio esptool freecad masterpdfeditor mtr prusa-slicer arduino nodejs_22 ugs
+      nethogs xclip gnome-disk-utility qbittorrent remmina 
+      obs-studio kdenlive vlc zoxide util-linux
+      calc teams-for-linux bitwise fzf stremio 
+      freecad masterpdfeditor mtr prusa-slicer
       chromium openhantek6022 glibc nerd-fonts.hack openboard
       (python3.withPackages (python-pkgs: [
         python-pkgs.matplotlib
