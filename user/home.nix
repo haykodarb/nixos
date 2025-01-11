@@ -167,6 +167,13 @@ in {
       }
     ];
 
+    diagnostics = {
+	virtual_lines = {
+	    only_current_line = true;
+	};
+	virtual_text = false;
+    };
+
     extraLuaPackages = ps: [ps.jsregexp];
 
     opts = {
@@ -407,7 +414,7 @@ in {
     }
     {
 	key = "<leader>ll";
-	action = ":lua require(\"lsp_lines\").toggle()";
+	action = ":lua require(\"lsp_lines\").toggle()<CR>";
     }
     ];
     
