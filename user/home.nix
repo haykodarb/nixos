@@ -339,74 +339,77 @@ in {
     };
 
     keymaps = [
-      {
-        # Escape out of terminal
-        mode = "t";
-        key = "<Esc>";
-        action = "<C-\\><C-n>";
-      }
-      {
-	# Escape to remove highlight
+    {
+# Escape out of terminal
+	mode = "t";
+	key = "<Esc>";
+	action = "<C-\\><C-n>";
+    }
+    {
+# Escape to remove highlight
 	mode = "n";
 	key = "<Esc>";
 	action = ":noh<CR>";
 	options.silent = true;
-      }
-      {
+    }
+    {
 	key = "<leader>tb";
 	action = ":below terminal<CR>12<C-W>_";
-      }
-      {
+    }
+    {
 	key = "<leader>tr";
 	action = ":vertical terminal<CR>";
-      }
-      {
-        # Delete GDB program window and shift GDB to the right and set width to 80.
-        key = "<leader>dx";
-        action = "<C-\\><C-n>:Program<CR><C-w>:q!<CR>:Gdb<CR><C-W>J:Source<CR><C-W>H:Gdb<CR>70<C-W>|<C-W>r:Var<CR>:below terminal<CR>10<C-W>_:Gdb<CR>30<C-W>_";
-      }
-      {
-        key = "<leader>dz";
-        action = ":Termdebug<CR>";
-      }
-      {
-        key = "<leader>dm";
-        action = ":make -j8<CR>";
-      }
-      {
-        key = "<leader>dc";
-        action = ":Continue<CR>";
-      }
-      {
-        key = "<leader>db";
-        action = ":Break<CR>";
-      }
-      {
-        key = "<leader>dv";
-        action = ":Clear<CR>";
-      }
-      {
-        key = "<leader>dn";
-        action = ":Over<CR>";
-      }
-      {
-        key = "<leader>ds";
-        action = ":Stop<CR>";
-      }
-      {
-        key = "<leader>da";
-        action = ":Run<CR>";
-      }
-      {
-        key = "<leader>dl";
-        action = ":call TermDebugSendCommand('load')<CR>";
-      }
-      {
+    }
+    {
+# Delete GDB program window and shift GDB to the right and set width to 80.
+	key = "<leader>dx";
+	action = "<C-\\><C-n>:Program<CR><C-w>:q!<CR>:Gdb<CR><C-W>J:Source<CR><C-W>H:Gdb<CR>70<C-W>|<C-W>r:Var<CR>:below terminal<CR>10<C-W>_:Gdb<CR>30<C-W>_";
+    }
+    {
+	key = "<leader>dz";
+	action = ":Termdebug<CR>";
+    }
+    {
+	key = "<leader>dm";
+	action = ":make -j8<CR>";
+    }
+    {
+	key = "<leader>dc";
+	action = ":Continue<CR>";
+    }
+    {
+	key = "<leader>db";
+	action = ":Break<CR>";
+    }
+    {
+	key = "<leader>dv";
+	action = ":Clear<CR>";
+    }
+    {
+	key = "<leader>dn";
+	action = ":Over<CR>";
+    }
+    {
+	key = "<leader>ds";
+	action = ":Stop<CR>";
+    }
+    {
+	key = "<leader>da";
+	action = ":Run<CR>";
+    }
+    {
+	key = "<leader>dl";
+	action = ":call TermDebugSendCommand('load')<CR>";
+    }
+    {
 	key = "<leader>fo";
 	action = ":FlutterOutlineToggle<CR>";
-      }
-
-      ];
+    }
+    {
+	key = "<leader>ll";
+	action = ":lua require(\"lsp_lines\").toggle()";
+    }
+    ];
     
     colorschemes.rose-pine.enable = true;
     colorschemes.rose-pine.settings = {
