@@ -282,13 +282,13 @@ in {
       };
 
       treesitter.enable = true;
-      flutter-tools = {
-	enable = true;
-	flutterPackage = null;
-	settings = {
-	   flutter_lookup_cmd = "dirname $(which flutter)";
-	};
-      };
+      #flutter-tools = {
+	# enable = true;
+	# flutterPackage = null;
+	# settings = {
+	#    flutter_lookup_cmd = "dirname $(which flutter)";
+	# };
+	#      };
       web-devicons.enable = true;
 
       lsp = {
