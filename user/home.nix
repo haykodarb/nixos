@@ -297,8 +297,14 @@ in {
         servers = {
           lua_ls.enable = true;
           nixd.enable = true;
-	  dartls.enable = true;
-          dartls.settings.lineLength = 120;
+	  dartls = {
+	    enable = true;
+	    package = null;
+	    settings = {
+		lineLength = 120;
+	    };
+	  };
+
           clangd.enable = true;
           html.enable = true;
           cssls.enable = true;
