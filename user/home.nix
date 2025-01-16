@@ -286,7 +286,7 @@ in {
 	enable = true;
 	flutterPackage = null;
 	settings = {
-	    # flutter_lookup_cmd = "dirname $(which flutter)";
+	   flutter_lookup_cmd = "dirname $(which flutter)";
 	};
       };
       web-devicons.enable = true;
