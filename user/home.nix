@@ -62,7 +62,7 @@ in {
 	shellAliases = {
 	    ll = "ls -l";
 	    la = "ls -a";
-	    dev = "nix develop";
+	    dev = "nix develop && nvim .";
 	    google-chrome = "chromium";
 	    bw = "bitwise";
 	    rebuild = "~/nixos/rebuild.sh";
