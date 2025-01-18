@@ -91,6 +91,12 @@ in {
         env = {
           TERM = "xterm-256color";
         };
+	keyboard.bindings = [
+	    {
+		key = "Esc";
+		action = "ToggleViMode";
+	    }
+	];
 	font = {
 	    normal = {
 		family = "Hack Nerd Font Mono";
