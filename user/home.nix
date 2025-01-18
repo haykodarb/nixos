@@ -93,7 +93,7 @@ in {
         };
 	keyboard.bindings = [
 	    {
-		key = "Esc";
+		key = "Escape";
 		action = "ToggleViMode";
 	    }
 	];
