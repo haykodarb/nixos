@@ -94,6 +94,7 @@ in {
 	keyboard.bindings = [
 	    {
 		key = "Escape";
+		mods = "Shift";
 		action = "ToggleViMode";
 	    }
 	];
