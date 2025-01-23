@@ -203,6 +203,7 @@ in {
       luasnip.enable = true;
       friendly-snippets.enable = true;
       lsp-lines.enable = true;
+      oil.enable = true;
 
       #mini = {
       #  enable = true;
