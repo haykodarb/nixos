@@ -205,12 +205,6 @@ in {
       lsp-lines.enable = true;
       oil = {
 	    enable = true;
-	    settings = {
-		keymaps = {
-		    "<C-p>" = false;
-		    "<C-P>" = "actions.preview";
-		};
-	    };
       };
 
       #mini = {
@@ -270,25 +264,25 @@ in {
         };
 
         keymaps = {
-          "<leader>p" = {
+          "<leader>o" = {
             action = "live_grep";
             options = {
               desc = "Grep in root dir";
             };
           };
-          "<leader>o" = {
+          "<leader>i" = {
             action = "git_files";
             options = {
               desc = "Search git files";
             };
           };
-          "<C-p>" = {
+          "<C-o>" = {
             action = "find_files"; 
             options = {
               desc = "Find files root dir";
             };
           };
-          "<C-o>" = {
+          "<C-i>" = {
             action = "buffers";
             options = {
               desc = "Search open buffers";
