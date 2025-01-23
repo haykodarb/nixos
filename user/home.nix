@@ -26,8 +26,8 @@ in {
       nethogs xclip gnome-disk-utility qbittorrent remmina 
       obs-studio kdenlive vlc zoxide util-linux
       calc teams-for-linux bitwise fzf stremio 
-      freecad masterpdfeditor mtr prusa-slicer
-      chromium openhantek6022 glibc nerd-fonts.hack openboard
+      freecad mtr prusa-slicer
+      chromium glibc nerd-fonts.hack openboard
       (python3.withPackages (python-pkgs: [
         python-pkgs.matplotlib
       ]))
