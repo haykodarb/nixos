@@ -270,7 +270,7 @@ in {
               desc = "Grep in root dir";
             };
           };
-          "<leader>i" = {
+          "<leader>l" = {
             action = "git_files";
             options = {
               desc = "Search git files";
@@ -282,7 +282,7 @@ in {
               desc = "Find files root dir";
             };
           };
-          "<C-i>" = {
+          "<C-l>" = {
             action = "buffers";
             options = {
               desc = "Search open buffers";
@@ -328,6 +328,7 @@ in {
           lspBuf = {
             "<C-n>" = "hover";
             "<C-m>" = "code_action";
+	    "<C-i>" = "format";
             "<leader>ld" = "definition";
             "<leader>lD" = "references";
             "<leader>lt" = "type_definition";
