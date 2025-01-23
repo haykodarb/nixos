@@ -203,7 +203,15 @@ in {
       luasnip.enable = true;
       friendly-snippets.enable = true;
       lsp-lines.enable = true;
-      oil.enable = true;
+      oil = {
+	    enable = true;
+	    settings = {
+		keymaps = {
+		    "<C-p>" = false;
+		    "<C-P>" = "actions.preview";
+		};
+	    };
+      };
 
       #mini = {
       #  enable = true;
@@ -372,6 +380,10 @@ in {
 	mode = "t";
 	key = "<Esc>";
 	action = "<C-\\><C-n>";
+    }
+    {
+	key = "<leader>ex";
+	action = ":Oil<CR>";
     }
     {
 # Escape to remove highlight
