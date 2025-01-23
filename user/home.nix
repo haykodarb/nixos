@@ -328,7 +328,6 @@ in {
           lspBuf = {
             "<C-n>" = "hover";
             "<C-m>" = "code_action";
-            "<C-i>" = "format";
             "<leader>ld" = "definition";
             "<leader>lD" = "references";
             "<leader>lt" = "type_definition";
