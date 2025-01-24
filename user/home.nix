@@ -14,6 +14,8 @@ in {
     (import "${catppuccin}/modules/nixos")
   ];
 
+  home-manager.backupFileExtension = "backup";
+
   home-manager.users.hayk = {
     imports = [
       (import "${catppuccin}/modules/home-manager")
