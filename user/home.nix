@@ -22,7 +22,7 @@ in {
     home.stateVersion = "24.05";
     home.packages = with pkgs; [
       btop ripgrep fd jdk17 qgroundcontrol thunderbird-bin slack discord
-      electron lazygit catppuccin-gtk catppuccin-kde catppuccin-qt5ct catppuccin-cursors catppuccinifier-gui libreoffice-qt
+      electron catppuccin-gtk catppuccin-kde catppuccin-qt5ct catppuccin-cursors catppuccinifier-gui libreoffice-qt
       nethogs xclip gnome-disk-utility qbittorrent remmina 
       obs-studio kdenlive vlc zoxide util-linux
       calc teams-for-linux bitwise fzf stremio 
@@ -41,6 +41,15 @@ in {
     catppuccin.btop.enable = true;
 
     home.sessionPath = [];
+
+    programs.lazygit = {
+	enable = true;
+	settings = {
+	    os = {
+		editPreset = "nvim";
+	    };
+	};
+    };
 
     programs.direnv = {
       enable = true;
