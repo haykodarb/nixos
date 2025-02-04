@@ -142,7 +142,6 @@
     extraGroups = ["networkmanager" "wheel" "plugdev" "audio" "dialout"];
     packages = with pkgs; [
       kdePackages.kate
-      xf86_video_intel
     ];
   };
 
