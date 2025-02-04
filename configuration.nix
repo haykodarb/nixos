@@ -15,7 +15,7 @@
     settings.trusted-users = [ "root" "hayk" ];
     gc = {
 	automatic = true;
-	dates = "weekly";
+	dates = "monthly";
 	options = "--delete-older-than 30d";
     };
   };
@@ -40,6 +40,7 @@
 
   services.pipewire.enable = false;
   services.xserver.wacom.enable = true;
+  services.xserver.videoDrivers = [ "intel" ]; # or "nvidia", "amdgpu", etc.
 
   # rtkit is optional but recommended
   #services.pipewire = {
@@ -141,6 +142,7 @@
     extraGroups = ["networkmanager" "wheel" "plugdev" "audio" "dialout"];
     packages = with pkgs; [
       kdePackages.kate
+      xf86_video_intel
     ];
   };
 
