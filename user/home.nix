@@ -28,7 +28,7 @@ in {
       nethogs xclip gnome-disk-utility qbittorrent remmina 
       obs-studio kdenlive vlc zoxide util-linux
       calc teams-for-linux bitwise fzf stremio 
-      freecad mtr prusa-slicer
+      freecad mtr prusa-slicer poppins
       chromium glibc nerd-fonts.hack openboard 
       (python3.withPackages (python-pkgs: [
         python-pkgs.matplotlib
@@ -36,7 +36,6 @@ in {
     ];
 
     fonts.fontconfig.enable = true;
-    fonts.packages = with pkgs; [ poppins ];
 
     catppuccin.flavor = "mocha";
     catppuccin.enable = true;
