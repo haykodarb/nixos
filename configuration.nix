@@ -40,7 +40,6 @@
 
   services.pipewire.enable = false;
   services.xserver.wacom.enable = true;
-  services.xserver.videoDrivers = [ "intel" ]; # or "nvidia", "amdgpu", etc.
 
   # rtkit is optional but recommended
   #services.pipewire = {

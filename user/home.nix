@@ -29,13 +29,14 @@ in {
       obs-studio kdenlive vlc zoxide util-linux
       calc teams-for-linux bitwise fzf stremio 
       freecad mtr prusa-slicer
-      chromium glibc nerd-fonts.hack openboard
+      chromium glibc nerd-fonts.hack openboard 
       (python3.withPackages (python-pkgs: [
         python-pkgs.matplotlib
       ]))
     ];
 
     fonts.fontconfig.enable = true;
+    fonts.packages = with pkgs; [ poppins ];
 
     catppuccin.flavor = "mocha";
     catppuccin.enable = true;
