@@ -331,6 +331,7 @@ in {
           html.enable = true;
           cssls.enable = true;
           eslint.enable = true;
+	  ts_ls.enable = true;
 	  rust_analyzer.enable = true;
 	  rust_analyzer.installCargo = false;
 	  rust_analyzer.installRustc = false;
