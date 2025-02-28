@@ -83,6 +83,7 @@ in {
 	    personal = "cd ~/code/personal";
 	    rocket = "cd ~/code/work/rocket/rocket_caddis_original_fw/SW";
 	    communal = "cd ~/code/personal/communal/communal_app";
+	    crun = "gcc main.c -o main && ./main";
 	};
     };
 
