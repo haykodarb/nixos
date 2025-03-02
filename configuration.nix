@@ -121,7 +121,10 @@
 
   programs.firefox = {
     enable = true;
-    package = (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true;}) {});
+    package = (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; enablePlasmaIntegration = true; }) {});
+    preferences = {
+      "widget.use-xdg-desktop-portal.file-picker" = 1;
+    };
   };
 
   programs.nix-ld.enable = true;
