@@ -26,7 +26,7 @@ in {
       btop ripgrep fd jdk17 qgroundcontrol thunderbird-bin slack discord
       electron catppuccin-gtk catppuccin-kde catppuccin-qt5ct catppuccin-cursors catppuccinifier-gui libreoffice-qt
       nethogs xclip gnome-disk-utility qbittorrent remmina 
-      obs-studio kdenlive vlc zoxide util-linux
+      obs-studio kdePackages.kdenlive vlc zoxide util-linux
       calc teams-for-linux bitwise fzf stremio 
       freecad mtr prusa-slicer poppins
       chromium glibc nerd-fonts.hack openboard 
