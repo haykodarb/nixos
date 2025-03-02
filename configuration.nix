@@ -33,10 +33,12 @@
   documentation.man.generateCaches = true;
 
   hardware.enableAllFirmware = true;
-  services.pulseaudio.enable = true;
-  services.pulseaudio.support32Bit = true;
-  services.pulseaudio.extraConfig = "load-module module-combine-sink";
+  # services.pulseaudio.enable = true;
+  # services.pulseaudio.support32Bit = true;
+  # services.pulseaudio.extraConfig = "load-module module-combine-sink";
   hardware.graphics.enable = true;
+
+  services.pipewire.enable = true;
 
   services.xserver.wacom.enable = true;
 
