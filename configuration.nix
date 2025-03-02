@@ -121,6 +121,7 @@
 
   programs.firefox = {
     enable = true;
+    package = (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true;}) {});
   };
 
   programs.nix-ld.enable = true;
