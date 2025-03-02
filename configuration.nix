@@ -38,7 +38,6 @@
   services.pulseaudio.extraConfig = "load-module module-combine-sink";
   hardware.graphics.enable = true;
 
-  services.pipewire.enable = true;
   services.xserver.wacom.enable = true;
 
   # rtkit is optional but recommended
@@ -107,7 +106,6 @@
       xdg-desktop-portal-wlr
       xdg-desktop-portal-gtk
     ];
-    gtkUsePortal = true;
   };
 };
 
