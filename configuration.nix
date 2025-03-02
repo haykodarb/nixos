@@ -121,7 +121,7 @@
 
   programs.firefox = {
     enable = true;
-    package = (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; enablePlasmaIntegration = true; }) {});
+    package = (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true; }) {});
     preferences = {
       "widget.use-xdg-desktop-portal.file-picker" = 1;
     };
@@ -182,6 +182,13 @@
     neofetch
     nix-output-monitor
   ];
+
+  # Classical NixOS setup
+  environment.sessionVariables = {
+      # only needed for Sway
+      XDG_CURRENT_DESKTOP = "sway"; 
+  };
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
