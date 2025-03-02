@@ -121,12 +121,6 @@
 
   programs.firefox = {
     enable = true;
-    package = pkgs.wrapFirefox pkgs.firefox-unwrapped {
-      forceWayland = true;
-      extraPolicies = {
-        ExtensionSettings = {};
-      };
-    };
   };
 
   programs.nix-ld.enable = true;
