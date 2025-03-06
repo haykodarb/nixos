@@ -30,7 +30,7 @@ in {
       calc teams-for-linux bitwise fzf stremio 
       freecad mtr prusa-slicer poppins
       chromium glibc nerd-fonts.hack openboard 
-      nodejs_23 
+      nodejs_23 yacreader
       (python3.withPackages (python-pkgs: [
         python-pkgs.matplotlib
       ]))
